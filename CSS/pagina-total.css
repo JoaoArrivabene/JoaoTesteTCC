@@ -1,0 +1,188 @@
+html{
+   
+	position: relative;
+	background: whitesmoke;
+    width: 940px;
+     
+}
+
+.dadosParaEstaca{
+     text-align: center;
+    
+}
+
+#form-adiciona{
+    padding-left: 25%;
+  
+}
+
+
+.imagem-forcas-e-area{
+    width: 60%;
+    padding-left: 2%;
+
+}
+
+.imagem-tensoes{
+    width: 53%;
+    padding-left: 2%;
+
+}
+
+
+
+
+.imagem-planta-geral{
+    width: 90%;
+    padding-left: 2%;
+}
+
+azio{
+    width: 45%;
+}
+
+
+#alternado-seno-d{
+        width: 100%;
+        margin-bottom : .5em;
+        table-layout: fixed;
+        padding: .7em;
+        margin: 0;       
+        text-align: center;
+        font-weight: bold;
+        background-color: #EEE;
+        border: 1px solid #000000;
+     
+}
+
+
+#alternado-seno-d> :nth-child(even){
+     background: lightgray;
+     border: 1px solid #000000;
+}
+
+
+#tabela-geometria{
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    padding: .7em;
+    margin: 0;       
+    text-align: center;
+    font-weight: bold;
+    background-color: #eee;
+    border: 1px solid #000000;
+	
+}
+
+#tabela-geometria> :nth-child(even){
+	background: lightgreen;
+	border: 1px solid #000000;
+}
+
+#tabela-forcas{
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    padding: .7em;
+    margin: 0;       
+    text-align: center;
+    font-weight: bold;
+    background-color: #eee;
+    border: 1px solid #000000;
+}
+
+#tabela-forcas> :nth-child(even){
+	background: lightgreen;
+	border: 1px solid #000000;
+}
+
+#tabela-tensoes{
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    padding: .7em;
+    margin: 0;       
+    text-align: center;
+    font-weight: bold;
+    background-color: #eee;
+    border: 1px solid #000000;
+}
+
+#tabela-tensoes> :nth-child(even){
+	background: lightgreen;
+	border: 1px solid #000000;
+}
+
+#tabela-Quantitativo{
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    padding: .7em;
+    margin: 0;       
+    text-align: center;
+    font-weight: bold;
+    background-color: #EEE;
+    border: 1px solid #000000;
+ 
+}
+
+
+#tabela-Quantitativo> :nth-child(even){
+ background: lightgray;
+ border: 1px solid #000000;
+}
+
+th
+
+
+
+
+#armaduras-blocos{  
+    
+    table-layout: fixed;    
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-weight: bold;
+    background-color: #EEE;
+    text-align: center;
+    display: block;
+}
+
+
+td, th {
+	margin: 0 auto; 
+   
+    
+	
+}
+
+
+th{
+	font-weight: bold;
+	background-color: darkgray;
+    color: black;
+  
+}
+
+.geometria-bloco{
+    font-weight: bold;
+	background-color:blue;
+    color: black;
+    border: 1px solid black;
+}
+
+h4{
+    text-align: left;
+    font-weight: bold;
+   
+}
+
+.seno-novo{
+    display: flex;
+    text-align: center;    
+    float: right;
+   
+ 
+}

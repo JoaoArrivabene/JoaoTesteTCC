@@ -1,0 +1,172 @@
+/*CONFIGURAÇÃO DAS TABELAS*/
+table {
+	margin: 5px 0 10px;
+	
+	
+}
+
+thead {
+	background: #555555;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+
+
+th {	
+	padding: .25em;
+}
+
+
+label{
+	color: #555;
+	display: inline-flex;
+	margin-bottom: .2em;
+}
+
+
+/*CONFIGURAÇÃO DOS GEOMETRIA*/
+.geometria-blocoTotal{
+	display: inline-block;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+	padding: 20px;	
+	width: 1000px;
+	background: white;	
+	
+}
+
+/* CONFIGURAÇÕES TENSÕES SOLICITANTES*/
+#tensoes-solicitantes{
+
+vertical-align: top;	
+}
+
+.armadura-bloco-otimizacao{
+	
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+	padding: 20px;	
+	width: 1000px;
+	background: white;	
+	
+}
+
+
+
+
+/* CONFIGURAÇÕES DAS ARMADURAS*/
+.armaduras-blocos{
+	display: inline-block;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+	padding: 5px;	
+	width: 1000px;
+	vertical-align: top;
+		
+}
+
+/*CONFIGURAÇÃO DOS DADOS DO CONCRETO*/
+#concreto{
+	font-size: 18px;
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5%;
+
+}
+
+/*CONFIGURAÇÃO DOS DADOS DA GEOMETRIA*/
+#geometria {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 0%;
+	text-align: left;
+
+
+}
+
+/*CONFIGURAÇÃO DAS EXENTRICIDADES E ESTACAS*/
+#capacidade {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 3.5%;
+	text-align: left;
+	
+}
+
+/*CONFIGURAÇÃO DA CONCLUSÃO*/
+#resultados-comparativos {	
+
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 16.8%;
+	text-align: left;
+	
+	
+}
+
+
+
+#armaduras-blocos{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;	
+	
+}
+
+#geometria{
+	box-sizing: border-box;
+	border: 1px solid #000000;	
+	margin: 0;		
+}
+
+#capacidade{
+	box-sizing: border-box;
+	border: 1px solid #000000;	
+	margin: 0;
+}
+
+
+
+/*Contorno das bordas da tabela de As ESSE QUE PRECISA SER CONFIGURADO!!!!*/
+#armaduras-blocos1{
+	width: 100%;
+	margin-bottom : .5em;
+	table-layout: fixed;
+	padding: .7em;
+	margin: 0;       
+	text-align: center;
+	font-weight: bold;
+	background-color: #EEE;	
+	border: 1px solid #000000;
+	
+}
+
+/*Alteração das linhas dos As*/
+#armaduras-blocos1> :nth-child(even){
+	background: lightgreen;
+   	border: 1px solid #000000;
+};
+
+
+form td {	
+	padding: .15em;
+	margin: 0;
+	
+}
+
+#otimizacao{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	box-sizing: border-box;
+	border: 1px solid #000000;
+}
+
+

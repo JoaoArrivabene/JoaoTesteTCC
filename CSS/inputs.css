@@ -1,0 +1,98 @@
+/*CONFIGURANDO CABEÇARIO DOS INPUTS*/
+
+.dados{
+	display: inline-block;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+	padding: 20px;	
+	background: white;
+	width: 1000px;
+	font-weight: bold;	
+	
+}
+
+
+.pilaresAPeBP{
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	border-radius: 10px;
+	padding: 5px;
+	background: white;
+	width: 40%;	
+	float: left;
+	font-weight: bold;
+				
+}
+
+.diametroEstaca{	
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	border-radius: 10px;
+	padding: 5px;
+	background: white;
+	width: 40%;	
+	float: left;
+	font-weight: bold;
+
+}
+
+.forcaemomento{
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	border-radius: 10px;
+	padding: 5px;
+	background: white;
+	width: 40%;	
+	float: left;
+	font-weight: bold;
+}
+
+.dadosfck{
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	border-radius: 10px;
+	padding: 5px;
+	background: white;
+	width: 40%;	
+	float: left;
+	font-weight: bold;
+}
+
+
+
+.novaaltura{
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	border-radius: 10px;
+	padding: 5px;
+	background: white;
+	width: 250px;	
+	float: left;
+	font-weight: bold;
+}
+
+.tabelaOtimizacao{
+
+	
+
+}
+
+.otimizacao-armadura-finais{
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	border-radius: 10px;
+	padding: 5px;
+	background: white;
+	width: 30%;
+	font-weight: bold;
+}
+
+
+

@@ -1,0 +1,308 @@
+/*CONFIGURANÇÃO DO BOTÃO CALCULAR*/
+
+.botao-principal {
+	display: inline-block;
+	width:10%;
+	padding: 12px 0;
+	background: lightblue;	
+	font-weight: bold;
+	font-size: 15px;
+	border: bolder;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+	align-items: center;
+	}
+
+/*CONFIGURANÇÃO DO BOTÃO LIMPAR*/
+.recarregar {
+	display: inline-block;
+	width:10%;
+	padding: 12px 0;
+	font-weight: bold;
+	font-size: 15px;
+	border: bolder;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;	
+	background: lightsalmon;
+
+}
+
+/* CONFIGURANDO OS INPUTS E TEXTOS*/
+main {
+	margin: 0 auto;
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form legend {
+	margin: 5px 10px 5px;
+	width: 12%;	
+	display: inline-block;
+	color:black;
+}
+
+input {	
+	padding: 1px 10px;
+	width: 50%;
+
+}
+
+
+/*CONFIGURANDO INPUT OTIMIZAÇÃO*/
+.dadosParaEstaca{
+	text-align: center;
+	position: relative;
+
+}
+
+/*Textos em frente dos inputs*/
+.textos{
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+	display: inline-block;
+	width: 20%;
+	
+}
+
+/*Texto em frente ao input do ângulo seno*/
+.textos-seno{
+	font-size: 15px;
+	font-weight: bold;	
+	display: flex;
+	width: auto;
+	display: block;
+	float: left;
+			
+}
+
+/*input seno*/
+.variacao-seno{
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+	display: block;	
+	float: left;
+	width: auto;	
+	
+}
+
+
+
+/*botão de cálculo do ângulo seno*/
+#seno-ultimo{
+	width:15%;	
+	background: lightblue;	
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	align-items: center;	
+}
+
+
+
+/*Botão de cálcular a armadura*/
+#armadura{
+	width:15%;	
+	background: lightblue;	
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	align-items: center;	
+}
+
+/*Inputs dos AS*/
+.as-input{
+	width:12%;	
+	background: lightblue;	
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	text-align: center;
+
+}
+
+.as-input-pilar{
+	width:60%;	
+	background: lightblue;	
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	text-align: center;
+
+}
+
+.textos-As{
+	width:12%;	
+	font-weight: bold;
+	font-size: 17px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	float: left;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* inputs movéis */
+
+
+.Concreto{
+	position: absolute;	
+	left: 111%;
+	top:2.3%
+}
+
+.bitola-label{
+	width:8%;	
+	font-weight: bold;
+	font-size: 17px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	float: left;
+
+}
+
+.as-input-angulo{
+	width:60%;	
+	background: lightblue;	
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	text-align: center;
+
+}
+
+
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* PARTES DO ÂNGULO*/
+.as-input-angulo-movel{
+	width:13%;	
+	background: lightblue;	
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;	
+	position: absolute;
+	left: 38%;
+	text-align: center;
+
+}
+
+.textos-As-movel{	
+	width:20%;	
+	font-weight: bold;
+	font-size: 17px;
+}
+
+#angulo-calculo{
+	width:15%;	
+	background: rgb(216, 216, 16);
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	align-items: center;
+	padding: 6px 6px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* PARTES DA AS*/
+
+#armadura-tabela{
+	width:15%;	
+	background: rgb(216, 216, 16);
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	align-items: center;
+	padding: 6px 6px;
+
+}
+
+#calculaBloco2{
+	width:15%;	
+	background: rgb(216, 216, 16);
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	align-items: center;
+	padding: 6px 6px;
+	display: block;	
+	position: absolute;
+	right:-20%
+
+	
+}
+
+#calculaBloco5{
+	width:15%;	
+	background: red;
+	font-weight: bold;
+	font-size: 13px;
+	border: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	align-items: center;
+	padding: 6px 6px;
+	position: absolute;
+	right:-20%
+
+}
+
+.titulo-dados{
+	text-align: center;
+}
+
+.Pilares{
+	position: absolute;	
+	left: 42%;
+}
+
+.Estacas{
+	position: absolute;	
+	left: 67%;
+}
+
+.Carregamentos{
+	position: absolute;	
+	left: 86%;
+	top:2.45%;
+}
+
+
+.roteiro-pdf{	
+	position: absolute;
+	left: 65%;
+};

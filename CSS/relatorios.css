@@ -1,0 +1,41 @@
+/*CONFIGIRAÇÃO DOS LINKS DE RELATÓRIOS*/
+
+.roteiro-força{
+	position: absolute;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	top: 23%;
+	left: 3%;
+	color: white;
+	text-decoration: underline;
+
+
+}
+
+
+.roteiro{
+
+	position: absolute;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	top: 17%;
+	left: 3%;
+	color: white;
+	text-decoration: underline;
+
+	
+}
+
+
+.planta-desenho {
+	position: absolute;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	top: 55%;
+	left: 3%;
+	color: white;
+	text-decoration: underline;
+}

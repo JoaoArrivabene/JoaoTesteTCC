@@ -1,0 +1,36 @@
+/* CONFIGURAÇÃO TÍTULO*/
+.titulo-form{
+	text-align: center;
+	font-size: 2em;
+	margin-top: 1em;
+	font-weight: bold;
+	padding-left: 45%;
+}
+
+p {
+	text-align: center;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+
+h3{	
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color: antiquewhite;
+
+}
+
+.roda-pe{
+	text-align: center;
+	padding-left: 45%;
+
+}
+
+h4{
+	text-align: left;
+	font-size: 1em;
+	font-weight: bold;
+   
+}
