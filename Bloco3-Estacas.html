@@ -61,9 +61,11 @@
 			<label class="textos-As">Nk:</label>
 			<input id="nk" name="forcaNk" type="number" placeholder="Valor em kN" class="as-input-angulo">
             <br><br>
-			<label class="textos-As">Mk:</label>
+			<label class="textos-As">Mk.x:</label>
 			<input id="mk" name="forcaNk1" type="number" placeholder="Valor em kN*m" class="as-input-angulo"><br><br>
-            
+            <label class="textos-As">Mk.y:</label>
+			<input id="mk" name="forcaNk2" type="number" placeholder="Valor em kN*m" class="as-input-angulo"><br><br>
+           
 		    </ul><br>
             
             
@@ -105,6 +107,7 @@
                         <th>z</th>
                         <th>d</th>
                         <th>h</th>
+                        <th>l</th>
                         <th>fcd</th>
                         <th>αv2</th>
                      
@@ -121,7 +124,8 @@
                 <thead>
                      <tr>
                         <th>Nk.est.1</th>
-                        <th>Nk.est.2</th>
+                        <th>Nk.est.2</th>4
+                        <th>Nk.est.3</th>
                         <th>Nk.est.k</th>
                         <th>Nk.est.adm</th>
                         <th>Aest.amp</th>        
@@ -244,15 +248,13 @@
                 
                             <tr class="armaduras">
                                 <th>d</th>
-                                <th>As.1x</th>
-                                <th>Asx.min</th>
-                                <th>As.x.utili</th>	
-                                <th>As.1y</th>
-                                <th>Asy.min</th>
-                                <th>As.y.utili</th>
-                                <th>As.sup</th>	
+                                <th>As.1</th>
+                                <th>As.2</th>
+                                <th>As.min</th>	
+                                <th>As.utili</th>
+                                <th>As.sup</th>
                                 <th>As.pele</th>
-                                <th>Asw</th>													
+                            													
                             </tr>
                 
                         </thead>
@@ -314,9 +316,9 @@
     
 </section>
 
-<script src="JS/calculo-nkest.js"></script>
+<script src="JS/calculo-nkest-TresEstacas.js"></script>
 <script src="JS/teste.js"></script>
-<script src="JS/armadura.js"></script>
+<script src="JS/armaduraTresEstacas.js"></script>
 
 
 <footer class = "roda-pe">
