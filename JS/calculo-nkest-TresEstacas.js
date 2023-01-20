@@ -44,7 +44,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
     //Comprimento L de bloco
     var comprimentoL =Math.sqrt((eixoEstaca*eixoEstaca)-((eixoEstaca/2)*(eixoEstaca/2))).toFixed(0);
     var comprimentoLTd = document.createElement('td');
-        comprimentoLTd.textContent = dLinha + " cm";
+        comprimentoLTd.textContent = comprimentoL + " cm";
 
     var nkest1A = (1*nkest1 -(mkest1/(comprimentoL/100))-(mkest2/(comprimentoL/100))).toFixed(2);
     var nkest2A = (1*nkest1 +(mkest1/(comprimentoL/100))+(mkest2/(comprimentoL/100))).toFixed(2);
@@ -138,8 +138,8 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
     zBracoTd.textContent = zBraco + " cm";
 
     //altura útil 
-    var dMinino = (0.58*(eixoEstaca-form.pilarAp.value/2)); //ver se será usado
-    var dMaximo = (0.83*(eixoEstaca-form.pilarAp.value/2)); //ver se será usado
+    //var dMinino = (0.58*(eixoEstaca-form.pilarAp.value/2)); //ver se será usado
+    //var dMaximo = (0.83*(eixoEstaca-form.pilarAp.value/2)); //ver se será usado
     var alturaUtil= (zBraco/0.8).toFixed(2);     
     var alturaUtilTd = document.createElement("td");
         alturaUtilTd.textContent = alturaUtil + " cm";
@@ -207,7 +207,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
     //TENSÕES 
     // tensões no bloco devido Pilar 
 
-    var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(2);    
+    var tensaoPilar = ((3*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(2);    
     var tensaoPilarTd = document.createElement("td");
         tensaoPilarTd.textContent = tensaoPilar + " kN/cm²";
 
@@ -227,37 +227,37 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 
     //COMPARAÇÕES DAS SOLICITAÇÕES   
     var nkResisteNd = form.Nestd.value 
-    var nkResisteTd = document.createElement("td");
+    var nkResisteTd1 = document.createElement("td");
    
    
     if (nkResisteNd>= nkResiste){
-        nkResisteTd.textContent = " Resiste"; 
-        nkResisteTd.style.backgroundColor = "lightblue"
+        nkResisteTd1.textContent = " Resiste"; 
+        nkResisteTd1.style.backgroundColor = "lightblue"
          
     }else{
-        nkResisteTd.textContent = " Não resiste";
-        nkResisteTd.style.backgroundColor = "lightcoral"
+        nkResisteTd1.textContent = " Não resiste";
+        nkResisteTd1.style.backgroundColor = "lightcoral"
     }
              
 
     //situação ÁREA AMPLIADA DO PILAR 
 
     var ampliadaTd = nkRsultadoAmpliado; 
-    var ampliadaTd = document.createElement("td"); 
+    var ampliadaTd1 = document.createElement("td"); 
 
-    if (tensaoPilard>= ampliadaTd){
-        ampliadaTd.textContent = " Resiste ";
-        ampliadaTd.style.backgroundColor = "lightblue"           
+    if (tensaoPilard >= ampliadaTd){
+        ampliadaTd1.textContent = " Resiste ";
+        ampliadaTd1.style.backgroundColor = "lightblue"           
     }else{
-        ampliadaTd.textContent = " Não resiste";
-        ampliadaTd.style.backgroundColor = "lightcoral"        
+        ampliadaTd1.textContent = " Não resiste";
+        ampliadaTd1.style.backgroundColor = "lightcoral"        
     }
 
                   
     //situação resistente NBR6118
     var nbrTd = tensaoPilard; 
     var nbrATd = document.createElement("td");
-    if (nbrTd>= tensaoPilar){
+    if (nbrTd >= tensaoPilar){
         nbrATd.textContent = " Resiste"; 
         nbrATd.style.backgroundColor = "lightblue"  
          
@@ -268,8 +268,8 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
         tensaoTr.appendChild(tensaoPilarTd);
         tensaoTr.appendChild(tensaoPilarAreaTd);
         tensaoTr.appendChild(tensaoPilardTd);
-        tensaoTr.appendChild(nkResisteTd);
-        tensaoTr.appendChild(ampliadaTd);
+        tensaoTr.appendChild(nkResisteTd1);
+        tensaoTr.appendChild(ampliadaTd1);
         tensaoTr.appendChild(nbrATd);
 
     var tabelaTensaoTr = document.querySelector('#tabela-tensoes');

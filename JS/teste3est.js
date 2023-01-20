@@ -3,14 +3,21 @@ function angulo (event) {
     event.preventDefault();
 
     var form = document.querySelector("#form-adiciona");    
-    var nkest1 =  (1.05*form.forcaNk.value)/2
+    var ladoB =  ((form.estaca.value*1/2+15)/(Math.cos(26*Math.PI/180))).toFixed(0); //cálculo do lado B  
+    var ladoA =  (form.estaca.value*3 + 1*ladoB).toFixed(0);  //cálculo do lado A     
+    var dLinha =  5; //altura útil    
+    var nkest1 =  (1.05*form.forcaNk.value)/3
     var mkest1 =  form.forcaNk1.value
+    var mkest2 =  form.forcaNk2.value
     var eixo =  form.estaca.value*3;
+    var comprimentoL =Math.sqrt((eixo*eixo)-((eixo/2)*(eixo/2))).toFixed(0);
+         
 
-    var nkest1A = (1*nkest1 -(mkest1/(eixo/100))).toFixed(2);
-    var nkest2A = (1*nkest1 +(mkest1/(eixo/100))).toFixed(2);
-    var nkResiste = Math.max(nkest1A,nkest2A); 
-                 
+    var nkest1A = (1*nkest1 -(mkest1/(comprimentoL/100))-(mkest2/(comprimentoL/100))).toFixed(2);
+    var nkest2A = (1*nkest1 +(mkest1/(comprimentoL/100))+(mkest2/(comprimentoL/100))).toFixed(2);
+    var nkest3A = (1*nkest1 +(mkest1/((comprimentoL/100)*2))-(mkest2/((comprimentoL/100)*2))).toFixed(2);
+
+    var nkResiste = Math.max(nkest1A,nkest2A,nkest3A); 
     //cálculo do fcd    
     var fcd =  ((form.fck.value/10)/1.4).toFixed(2);
 
@@ -40,14 +47,10 @@ function angulo (event) {
 ////////////////////////////////////////////////////////////////////////////////
     //Exentricidades
     //cálculo das exentricidades 
-    var exentricidadeEx = (eixo/2-form.pilarAp.value/4).toFixed(2);
-   
-    //exentricidade em Y
-    var exentricidadeEy = ((2*form.estaca.value)/(3*Math.PI) - form.pilarBp.value/4).toFixed(2);
-
-    //exentricidade em E  
-    var exentricidadeE = Math.sqrt((exentricidadeEx*exentricidadeEx)+(exentricidadeEy*exentricidadeEy)).toFixed(2);    
-
+    var exentricidadeEx = (((2*form.estaca.value)/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2); //exentricidade em X   
+    var exentricidadeEy = (((comprimentoL*2)/3)+((form.pilarAp.value/3)/2)-(1*form.pilarAp.value/2)).toFixed(2); //exentricidade em Y    
+    var exentricidadeE = Math.sqrt((exentricidadeEx*exentricidadeEx)+(exentricidadeEy*exentricidadeEy)).toFixed(2); //exentricidade em E
+    
 ////////////////////////////////////////////////////////////////////////////////    
     //BRAÇO DE ALAVANCA, ALTURA ÚTIL E ALTURA DO BLOCO
     //braço de alavanca
@@ -83,8 +86,8 @@ function angulo (event) {
     //delta y 
     var deltaY = ((xBarra*exentricidadeEy)/zBraco).toFixed(2);
     
-    //árae pilar ampliada 
-    var areaAmpliadaPilar = (((form.pilarAp.value/2)+deltaX*1)*((form.pilarBp.value/2)+deltaY*1)).toFixed(2);
+    //árae pilar ampliada     
+    var areaAmpliadaPilar = (((form.pilarAp.value/3)+deltaX*1)*((form.pilarBp.value/2)+deltaY*1)).toFixed(2);
     console.log(areaAmpliadaPilar)
 
     // tensões no área ampliada !    

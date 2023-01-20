@@ -20,7 +20,12 @@ html{
 .imagem-forcas-e-area{
     width: 60%;
     padding-left: 2%;
+}
 
+
+.imagem-forcas-e-area1{
+    width: 70%;
+    padding-left: 2%;
 }
 
 .imagem-tensoes{
@@ -29,16 +34,15 @@ html{
 
 }
 
-
-
-
 .imagem-planta-geral{
     width: 90%;
     padding-left: 2%;
 }
 
-azio{
-    width: 45%;
+
+.imagem-planta-geral1{
+    width: 70%;
+    padding-left: 2%;
 }
 
 

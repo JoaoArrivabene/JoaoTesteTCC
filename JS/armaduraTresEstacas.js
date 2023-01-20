@@ -16,7 +16,7 @@ function armadura (event) {
     var nkest1A = (1*nkest1 -(mkest1/(comprimentoL/100))-(mkest2/(comprimentoL/100))).toFixed(2);
     var nkest2A = (1*nkest1 +(mkest1/(comprimentoL/100))+(mkest2/(comprimentoL/100))).toFixed(2);
     var nkest3A = (1*nkest1 +(mkest1/((comprimentoL/100)*2))-(mkest2/((comprimentoL/100)*2))).toFixed(2);
-    var nkest4A = (1*nkest1 -(mkest1/((comprimentoL/100)*2))+(mkest2/((comprimentoL/100)*2))).toFixed(2);
+
     var nkResiste = Math.max(nkest1A,nkest2A,nkest3A); 
             
     //cálculo do fcd
@@ -26,7 +26,7 @@ function armadura (event) {
     var alfav2 =  (1-(form.fck.value/250)).toFixed(2);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //Exentricidades  
+    //Excentricidades  
     //cálculo das exentricidades ESTACA FRONTAL
     var exentricidadeEx = (((2*form.estaca.value)/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2); //exentricidade em X   
     var exentricidadeEy = (((comprimentoL*2)/3)+((form.pilarAp.value/3)/2)-(1*form.pilarAp.value/2)).toFixed(2); //exentricidade em Y    
@@ -60,20 +60,25 @@ function armadura (event) {
 
     // CÁLCULO DAS DISTRIBIÇÕES DAS FORÇAS EM SUAS DECOMPOSIÇÕES    
     var NK1 = ((nkResiste*exentricidadeE)/zBraco).toFixed(2);
+
     var NK2X = ((nkResiste*exentricidadeEx1)/zBraco).toFixed(2); //TRIÂNGULO EM X
     var NK2Y = ((nkResiste*exentricidadeEy1)/zBraco).toFixed(2); //TRIÂNGULO EM Y
     var anguloNK1 =  (Math.atan((eixo/2)/comprimentoL)*180/Math.PI).toFixed(2);
-    var NKT1 = (NK1/(2*Math.cos(anguloNK1*Math.PI/180))).toFixed(2);
+    
+
+    var NKT1 = (NK1/(2*Math.cos(anguloNK1*Math.PI/180))).toFixed(2);   
     var NKT = (NK2X/(Math.cos(anguloNK1*Math.PI/180))).toFixed(2);
     var NKTX = (NK2X - NKT*Math.sin(anguloNK1*Math.PI/180)).toFixed(2);
 
+    console.log(NKT1)
+
      // Armadura AS1
-    var As1 = ((NKT1*1.4)/(50/1.15)).toFixed(2);
+    var As1 = (2*((NKT1*1.4)/(50/1.15))).toFixed(2);
     var As1Td = document.createElement("td");
     As1Td.textContent = As1 + " cm²";  
 
     // Aramdura As2     
-    var As2 = ((NKTX*1.4)/(50/1.15)).toFixed(2);
+    var As2 = (2*((NKTX*1.4)/(50/1.15))).toFixed(2);
     var As2Td = document.createElement("td");
     As2Td.textContent = As2 + " cm²"; 
     
@@ -81,9 +86,8 @@ function armadura (event) {
     //AsMin
     var Zrt = 0.6*(alturaH-0.4*alturaUtil)    
     var b0 = ((1*form.estaca.value+ 5)*2).toFixed(2);
-    var fctm = (0.3*Math.pow(20,(2/3))).toFixed(2); 
-    var Rctd = (0.8*(alturaH-0.4*alturaUtil)*(fctm/10)*b0).toFixed(2);
-    var Rctd1 = (0.8*(alturaH/100-0.4*alturaUtil/100)*(fctm*1000)*b0/100).toFixed(2);
+    var fctm = (0.3*Math.pow(form.fck.value,(2/3))).toFixed(3); 
+    var Rctd = (0.8*(alturaH-0.4*alturaUtil)*(fctm/10)*b0).toFixed(2);  
     var Asmin = ((Rctd*Zrt)/((alturaUtil-((0.4*alturaUtil)/2))*(50/1.15))).toFixed(2);
 
     var AsminTd = document.createElement("td");
@@ -92,20 +96,27 @@ function armadura (event) {
     //As utilizado
     var Asutili = Math.max(As1,As2,Asmin);
     var AsutiliTd = document.createElement("td");
-    AsutiliTd.textContent = Asutili + " cm²"; 
+    AsutiliTd.textContent = Asutili + " cm², por face"; 
  
     //Aramdura - Asup
     
-    var AsSup = ((nkResiste/(4.5*(50/1.15)))/3).toFixed(2);
+    var AsSup = (nkResiste/(4.5*(50/1.15))).toFixed(2);
+    //var AsSup1 = (AsSup/3).toFixed(2);
     var AsSupTd = document.createElement("td");
-    AsSupTd.textContent = AsSup + " cm²";
+    AsSupTd.textContent = AsSup + " cm², por face "  //+ AsSup1 + " cm², por face";
 
  
     //Aramdura - Aspele
 
-    var AsPele = (Asutili/8).toFixed(2);
+    var AsPele = (3*Asutili/8).toFixed(2);
     var AsPeleTd = document.createElement("td");
-    AsPeleTd.textContent = AsPele + " cm²";
+    AsPeleTd.textContent = AsPele + " cm², por face";
+
+     //Aramdura - Asmalha
+
+    var AsMalha = (Asutili/5).toFixed(2);
+    var AsMalhaTd = document.createElement("td");
+    AsMalhaTd.textContent = AsMalha + " cm²";
    
     AsTr.appendChild(alturaUtilTd);
     AsTr.appendChild(As1Td);
@@ -114,7 +125,8 @@ function armadura (event) {
     AsTr.appendChild(AsutiliTd);
     AsTr.appendChild(AsSupTd);
     AsTr.appendChild(AsPeleTd);
-    AsTr.appendChild(AsPeleTd);
+    AsTr.appendChild(AsMalhaTd);
+   
 
     var tabelaAs = document.querySelector ('#armaduras-blocos1');
     tabelaAs.appendChild(AsTr);  
@@ -136,20 +148,20 @@ function armadura (event) {
 
         //Quantidade Asxutil           
             
-           var bitolaAsx = (Asutili/((((form.asx.value/10)*(form.asx.value/10)*Math.PI))/4)).toFixed(0)                                   
-            var BitolaAsxTd4 = document.createElement("td");  
+           var bitolaAsx = 3*(Asutili/((((form.asx.value/10)*(form.asx.value/10)*Math.PI))/4)).toFixed(0)                                   
+           var BitolaAsxTd4 = document.createElement("td");  
                 BitolaAsxTd4.textContent = bitolaAsx + " barras";   
                      
         //Espaçamento Asxutil            
-            var BitolaAsx5 = (eixo/bitolaAsx).toFixed(0); //rever **  
-            var BitolaAsx6 = 15;                       
+            var BitolaAsx5 = ((1*form.estaca.value+5)/(bitolaAsx/3)).toFixed(0); //rever **  
+            //var BitolaAsx6 = 15;                       
             var BitolaAsxTd5 = document.createElement("td");
       
-            if(BitolaAsx5<=BitolaAsx6){
+            //if(BitolaAsx5<=BitolaAsx6){
                 BitolaAsxTd5.textContent = BitolaAsx5 + " cm";
-            }else{
-                BitolaAsxTd5.textContent = BitolaAsx6 + " cm";
-            }
+            //}else{
+                //BitolaAsxTd5.textContent = BitolaAsx6 + " cm";
+            //}
             
         //Comprimento das barras
 
@@ -189,24 +201,24 @@ function armadura (event) {
 
         //Quantidade AsSup
 
-            var bitolaAssup = (AsSup/((((form.assup.value/10)*(form.assup.value/10)*Math.PI))/4)).toFixed(0);                                    
+            var bitolaAssup = 2*(AsSup/((((form.assup.value/10)*(form.assup.value/10)*Math.PI))/4)).toFixed(0);                                    
             var BitolaAssupTd = document.createElement("td");  
                 BitolaAssupTd.textContent = bitolaAssup + " barras";   
                      
         //Espaçamento Asyutil            
             var BitolaAssup5 = (ladoA/bitolaAssup).toFixed(0);  
-            var BitolaAssup6 = 15;                       
+            //var BitolaAssup6 = 15;                       
             var BitolaAssupTd5 = document.createElement("td");
       
-            if(BitolaAssup5<=BitolaAssup6){
+            //if(BitolaAssup5<=BitolaAssup6){
                 BitolaAssupTd5.textContent = BitolaAssup5 + " cm";
-            }else{
-                BitolaAssupTd5.textContent = BitolaAssup6 + " cm";
-            }
+            //}else{
+                //BitolaAssupTd5.textContent = BitolaAssup6 + " cm";
+            //}
             
         //Comprimento das barras
 
-            var ComprimentoAssup = (ladoA-2*dLinha+2*(0.7*45*(form.asy.value/10))).toFixed(0);
+            var ComprimentoAssup = (ladoA-2*dLinha+2*(0.7*45*(form.assup.value/10))).toFixed(0);
             var ComprimentoAssupTd = document.createElement("td");
                 ComprimentoAssupTd.textContent = ComprimentoAssup + " cm";
             
@@ -241,42 +253,95 @@ function armadura (event) {
 
         //Quantidade Aspele
 
-            var bitolaAspele = (AsPele/((((form.aspele.value/10)*(form.aspele.value/10)*Math.PI))/4)).toFixed(0);                                    
+            var bitolaAspele = 3*(AsPele/((((form.aspele.value/10)*(form.aspele.value/10)*Math.PI))/4)).toFixed(0);                                    
             var BitolaAspeleTd = document.createElement("td");  
                 BitolaAspeleTd.textContent = bitolaAspele + " barras";   
                     
         //Espaçamento Aspeleutil            
-            var BitolaAspele5 = ((alturaH)/bitolaAspele).toFixed(0);  
-            var BitolaAspele6 = 15;                       
+            var BitolaAspele5 = ((alturaH-2*dLinha)/(bitolaAspele/3)).toFixed(0);  
+            //var BitolaAspele6 = 15;                       
             var BitolaAspeleTd5 = document.createElement("td");
     
-            if(BitolaAspele5<=BitolaAspele6){
+            //if(BitolaAspele5<=BitolaAspele6){
                 BitolaAspeleTd5.textContent = BitolaAspele5 + " cm";
-            }else{
-                BitolaAspeleTd5.textContent = BitolaAspele6 + " cm";
-            }
+            //}else{
+                //BitolaAspeleTd5.textContent = BitolaAspele6 + " cm";
+            //}
             
         //Comprimento das barras
 
-            var ComprimentoAspele = (3*ladoA+3*ladoB-4*dLinha+14).toFixed(0);
+            var ComprimentoAspele = (1*ladoA+1*ladoB-2*dLinha).toFixed(0);
             var ComprimentoAspeleTd = document.createElement("td");
                 ComprimentoAspeleTd.textContent = ComprimentoAspele + " cm";
             
         //Aço kg
             var AcoAspeleKg =  (bitolaAspele*(ComprimentoAspele/100)*(((((form.aspele.value/1000)*(form.aspele.value/1000)*Math.PI))/4)*7800)).toFixed(2);
             var AcoAspeleKgTd = document.createElement("td");
-                AcoAspeleKgTd.textContent = AcoAspeleKg; 
-                
-                
-            QuantitativoAspeleTr.appendChild(TipoAspeleTd);
-            QuantitativoAspeleTr.appendChild(BarraAspeleTd);            
-            QuantitativoAspeleTr.appendChild(BitolaAspeleTd);
-            QuantitativoAspeleTr.appendChild(BitolaAspeleTd5);
-            QuantitativoAspeleTr.appendChild(ComprimentoAspeleTd);
-            QuantitativoAspeleTr.appendChild(AcoAspeleKgTd);
+                AcoAspeleKgTd.textContent = AcoAspeleKg;  
 
-            var tabelaAspele = document.querySelector ('#tabela-Quantitativo');
-                tabelaAspele.appendChild(QuantitativoAspeleTr); 
+
+                QuantitativoAspeleTr.appendChild(TipoAspeleTd);
+                QuantitativoAspeleTr.appendChild(BarraAspeleTd);            
+                QuantitativoAspeleTr.appendChild(BitolaAspeleTd);
+                QuantitativoAspeleTr.appendChild(BitolaAspeleTd5);
+                QuantitativoAspeleTr.appendChild(ComprimentoAspeleTd);
+                QuantitativoAspeleTr.appendChild(AcoAspeleKgTd);
+                 
+    
+                var tabelaAsPele = document.querySelector ('#tabela-Quantitativo');
+                    tabelaAsPele.appendChild(QuantitativoAspeleTr);
+
+
+
+                
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Tipo Asmalha
+            var QuantitativoAsMalhaTr= document.createElement("tr");
+            var TipoAsMalhaTd = document.createElement('td');
+                TipoAsMalhaTd.textContent = "As.malha"
+        
+        // Barra em malha
+    
+            var BarraAsMalha =form.asw.value;                            
+            var BarraAsMalhaTd = document.createElement("td");
+                BarraAsMalhaTd.textContent = BarraAsMalha + " mm" 
+        
+
+        //Quantidade Asmalha
+
+            var bitolaAsMalha = 2*(AsMalha/((((form.aspele.value/10)*(form.aspele.value/10)*Math.PI))/4)).toFixed(0);                                    
+            var BitolaAsMalhaTd = document.createElement("td");  
+                BitolaAsMalhaTd.textContent = bitolaAsMalha + " barras";   
+                    
+        //Espaçamento Asmalha            
+            var BitolaAsMalha1 = ((ladoA)/(bitolaAsMalha)).toFixed(0);                                     
+            var BitolaAsMalha1Td = document.createElement("td");    
+                BitolaAsMalha1Td.textContent = BitolaAsMalha1 + " cm";
+       
+            
+        //Comprimento das barras
+
+            var ComprimentoAsMalha = (ladoA-2*dLinha+2*(0.7*45*(form.assup.value/10))).toFixed(0);
+            var ComprimentoAsMalhaTd = document.createElement("td");
+                ComprimentoAsMalhaTd.textContent = ComprimentoAsMalha + " cm";
+            
+        //Aço kg
+            var AcoAsMalhaKg =  (bitolaAsMalha*(ComprimentoAsMalha/100)*(((((form.asw.value/1000)*(form.asw.value/1000)*Math.PI))/4)*7800)).toFixed(2);
+            var AcoAsMalhaKgTd = document.createElement("td");
+                AcoAsMalhaKgTd.textContent = AcoAsMalhaKg; 
+                
+                QuantitativoAsMalhaTr.appendChild(TipoAsMalhaTd);
+                QuantitativoAsMalhaTr.appendChild(BarraAsMalhaTd);            
+                QuantitativoAsMalhaTr.appendChild(BitolaAsMalhaTd);
+                QuantitativoAsMalhaTr.appendChild(BitolaAsMalha1Td);
+                QuantitativoAsMalhaTr.appendChild(ComprimentoAsMalhaTd);
+                QuantitativoAsMalhaTr.appendChild(AcoAsMalhaKgTd);
+                QuantitativoAsMalhaTr.appendChild(AcoAsMalhaKgTd);
+
+
+            var tabelaAsMalha = document.querySelector ('#tabela-Quantitativo');
+                tabelaAsMalha.appendChild(QuantitativoAsMalhaTr); 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                      
@@ -350,13 +415,14 @@ function armadura (event) {
             var Area1 = ((((comprimentoL/100)))+(((form.estaca.value/100)/2)+(15/100)))*(ladoB/100); //retangulo meio            
             var Area2 = (eixo/100+form.estaca.value/100+30/100)*(((form.estaca.value/100)/2)+15/100); //retangulo baixo           
             var Area3 = (Math.sqrt(((ladoB/100)*(ladoB/100))-((((form.estaca.value/100)/2)+15/100)*(((form.estaca.value/100)/2)+15/100))))*(((form.estaca.value/100)/2)+15/100) //subtrair1
-       
+            
            
             var lado1 = ((eixo/100+(((form.estaca.value/100)+30/100)))-ladoB/100)/2
             var lado2 = ((((comprimentoL/100)))+(((form.estaca.value/100)/2)+(15/100)))
             var Area4 = lado1*lado2
            
             var AreaTotal = (Area1+Area2-Area3+Area4).toFixed(2);
+            console.log(AreaTotal)
        
             var ConcretoKg = (AreaTotal*alturaH/100).toFixed(2)
             var ConcretoTd = document.createElement("td");

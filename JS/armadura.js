@@ -210,20 +210,17 @@ function armadura (event) {
         //Quantidade Asyutil
 
             var AsYBitola = Math.max(AsY,AsYmin)
-            var bitolaAsy = (AsYBitola/((((form.asy.value/10)*(form.asy.value/10)*Math.PI))/4)).toFixed(0);                                    
+            var bitolaAsy = 2*(AsYBitola/((((form.asy.value/10)*(form.asy.value/10)*Math.PI))/4)).toFixed(0); 
+            var bitolaAsy2 = bitolaAsy/2                                   
             var BitolaAsYTd = document.createElement("td");  
-                BitolaAsYTd.textContent = bitolaAsy + " barras";   
+                BitolaAsYTd.textContent = bitolaAsy + " barras " + bitolaAsy2 + " por estaca"  
                      
         //Espaçamento Asyutil            
-            var BitolaAsy5 = (ladoB/bitolaAsy).toFixed(0);  
-            var BitolaAsy6 = 20;                       
-            var BitolaAsyTd5 = document.createElement("td");
-      
-            if(BitolaAsy5<=BitolaAsy6){
-                BitolaAsyTd5.textContent = BitolaAsy5 + " cm";
-            }else{
-                BitolaAsyTd5.textContent = BitolaAsy6 + " cm";
-            }
+            var BitolaAsy5 = ((1*form.estaca.value+5)/(bitolaAsy2)).toFixed(0);  
+                                
+            var BitolaAsyTd5 = document.createElement("td");      
+            BitolaAsyTd5.textContent = BitolaAsy5 + " cm";
+        
             
         //Comprimento das barras
 
@@ -268,15 +265,15 @@ function armadura (event) {
                 BitolaAssupTd.textContent = bitolaAssup + " barras";   
                      
         //Espaçamento Asyutil            
-            var BitolaAssup5 = (ladoA/bitolaAssup).toFixed(0);  
-            var BitolaAssup6 = 20;                       
+            var BitolaAssup5 = (ladoB/bitolaAssup).toFixed(0);  
+            //var BitolaAssup6 = 20;                       
             var BitolaAssupTd5 = document.createElement("td");
       
-            if(BitolaAssup5<=BitolaAssup6){
+            //if(BitolaAssup5<=BitolaAssup6){
                 BitolaAssupTd5.textContent = BitolaAssup5 + " cm";
-            }else{
-                BitolaAssupTd5.textContent = BitolaAssup6 + " cm";
-            }
+            //}else{
+                //BitolaAssupTd5.textContent = BitolaAssup6 + " cm";
+            //}
             
         //Comprimento das barras
 
@@ -321,15 +318,15 @@ function armadura (event) {
                 BitolaAspeleTd.textContent = bitolaAspele + " barras";   
                     
         //Espaçamento Aspeleutil            
-            var BitolaAspele5 = (ladoB/bitolaAspele).toFixed(0);  
-            var BitolaAspele6 = 20;                       
+            var BitolaAspele5 = (alturaH/bitolaAspele).toFixed(0);  
+            //var BitolaAspele6 = 20;                       
             var BitolaAspeleTd5 = document.createElement("td");
     
-            if(BitolaAspele5<=BitolaAspele6){
+            //if(BitolaAspele5<=BitolaAspele6){
                 BitolaAspeleTd5.textContent = BitolaAspele5 + " cm";
-            }else{
-                BitolaAspeleTd5.textContent = BitolaAspele6 + " cm";
-            }
+            //}else{
+                //BitolaAspeleTd5.textContent = BitolaAspele6 + " cm";
+           //}
             
         //Comprimento das barras
 
@@ -372,14 +369,14 @@ function armadura (event) {
                     
         //Espaçamento Asw            
             var BitolaAsw5 = (ladoA/bitolaAsw).toFixed(0);  
-            var BitolaAsw6 = 20;                       
+            //var BitolaAsw6 = 20;                       
             var BitolaAswTd5 = document.createElement("td");
 
-            if(BitolaAsw5<=BitolaAsw6){
-                BitolaAswTd5.textContent = bitolaAsw + " cm";
-            }else{
-                BitolaAswTd5.textContent = BitolaAsw6 + " cm";
-            }
+            //if(BitolaAsw5<=BitolaAsw6){
+                BitolaAswTd5.textContent = BitolaAsw5 + " cm";
+            //}else{
+               //BitolaAswTd5.textContent = BitolaAsw6 + " cm";
+            //}
             
         //Comprimento das barras
 

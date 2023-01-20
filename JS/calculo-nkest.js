@@ -36,7 +36,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 /////////////////////////////////////////////////////////////////////////
     //Froças nas Estacas
     var nkest1 =  (form.forcaNk.value*1.05)/2;
-    var mkest1 =  form.forcaNk1.value/2;
+    var mkest1 =  form.forcaNk1.value;
     var eixo =  form.estaca.value*3;        
          
     //criação das forças nas estacas 
@@ -121,7 +121,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
         alturaUtilTd.textContent = alturaUtil + " cm";
  
     //altura total do bloco
-    var alturaH = (alturaUtil*1+5).toFixed(0);    
+    var alturaH = (alturaUtil*1+5).toFixed(2);    
     var alturaHTd = document.createElement("td");
     alturaHTd.textContent = alturaH + " cm";
 
@@ -200,30 +200,30 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 
     //COMPARAÇÕES DAS SOLICITAÇÕES   
     var nkResisteNd = form.Nestd.value 
-    var nkResisteTd = document.createElement("td");
+    var nkResisteTd1 = document.createElement("td");
    
    
     if (nkResisteNd>= nkResiste){
-        nkResisteTd.textContent = " Resiste"; 
-        nkResisteTd.style.backgroundColor = "lightblue"
+        nkResisteTd1.textContent = " Resiste"; 
+        nkResisteTd1.style.backgroundColor = "lightblue"
          
     }else{
-        nkResisteTd.textContent = " Não resiste";
-        nkResisteTd.style.backgroundColor = "lightcoral"
+        nkResisteTd1.textContent = " Não resiste";
+        nkResisteTd1.style.backgroundColor = "lightcoral"
     }
              
 
     //situação ÁREA AMPLIADA DO PILAR 
 
     var ampliadaTd = nkRsultadoAmpliado; 
-    var ampliadaTd = document.createElement("td"); 
+    var ampliadaTd1 = document.createElement("td"); 
 
     if (tensaoPilard>= ampliadaTd){
-        ampliadaTd.textContent = " Resiste ";
-        ampliadaTd.style.backgroundColor = "lightblue"           
+        ampliadaTd1.textContent = " Resiste ";
+        ampliadaTd1.style.backgroundColor = "lightblue"           
     }else{
-        ampliadaTd.textContent = " Não resiste";
-        ampliadaTd.style.backgroundColor = "lightcoral"        
+        ampliadaTd1.textContent = " Não resiste";
+        ampliadaTd1.style.backgroundColor = "lightcoral"        
     }
 
                   
@@ -244,8 +244,8 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
         tensaoTr.appendChild(tensaoPilarTd);
         tensaoTr.appendChild(tensaoPilarAreaTd);
         tensaoTr.appendChild(tensaoPilardTd);
-        tensaoTr.appendChild(nkResisteTd);
-        tensaoTr.appendChild(ampliadaTd);
+        tensaoTr.appendChild(nkResisteTd1);
+        tensaoTr.appendChild(ampliadaTd1);
         tensaoTr.appendChild(nbrATd);
 
     var tabelaTensaoTr = document.querySelector('#tabela-tensoes');
