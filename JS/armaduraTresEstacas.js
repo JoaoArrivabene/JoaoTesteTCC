@@ -370,7 +370,7 @@ function armadura (event) {
                 ComprimentoTotalTd.textContent ="Total Aço";
             
         //Aço kg
-            var totalKg = (AcoAsxKg*1+AcoAssupKg*1+AcoAspeleKg*1).toFixed(2)
+            var totalKg = (AcoAsxKg*1+AcoAssupKg*1+AcoAspeleKg*1+AcoAsMalhaKg*1).toFixed(2)
             var AcoKgTotalTd = document.createElement("td");
                 AcoKgTotalTd.textContent = totalKg + " kg"; 
                 
