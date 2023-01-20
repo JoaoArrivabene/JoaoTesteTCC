@@ -17,7 +17,7 @@ function angulo (event) {
     var nkest2A = (1*nkest1 +(mkest1/(comprimentoL/100))+(mkest2/(comprimentoL/100))).toFixed(2);
     var nkest3A = (1*nkest1 +(mkest1/((comprimentoL/100)*2))-(mkest2/((comprimentoL/100)*2))).toFixed(2);
 
-    var nkResiste = Math.max(nkest1A,nkest2A,nkest3A); 
+    var nkResiste = Math.max(nkest1A,nkest2A,nkest3A);     
     //cálculo do fcd    
     var fcd =  ((form.fck.value/10)/1.4).toFixed(2);
 
@@ -50,6 +50,14 @@ function angulo (event) {
     var exentricidadeEx = (((2*form.estaca.value)/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2); //exentricidade em X   
     var exentricidadeEy = (((comprimentoL*2)/3)+((form.pilarAp.value/3)/2)-(1*form.pilarAp.value/2)).toFixed(2); //exentricidade em Y    
     var exentricidadeE = Math.sqrt((exentricidadeEx*exentricidadeEx)+(exentricidadeEy*exentricidadeEy)).toFixed(2); //exentricidade em E
+
+    console.log( nkResiste + "kN")
+    console.log(fcd + "kN/cm²")
+    console.log(alfav2)
+    console.log(anguloTeta + "radianos")
+    console.log(anguloTeta1 + "graus")
+    
+    console.log(exentricidadeE +"cm")
     
 ////////////////////////////////////////////////////////////////////////////////    
     //BRAÇO DE ALAVANCA, ALTURA ÚTIL E ALTURA DO BLOCO

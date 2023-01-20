@@ -77,6 +77,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
     var aestaca = ((Math.PI/4)*((1*form.estaca.value+5)*(1*form.estaca.value+5))).toFixed(2);
     var aestacaTd = document.createElement("td");    
     aestacaTd.textContent = aestaca + " cm²"
+    console.log(aestaca + 'AREA ESTACA')
 
 /////////////////////////////////////////////////////////////////////
     //Angulo rad e graus

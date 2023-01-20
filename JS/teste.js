@@ -20,38 +20,32 @@ function angulo (event) {
 /////////////////////////////////////////////////////////////////////
     //Áreas Ampliadas da estaca
     //cálculo da área ampliada da estaca
-    var aestaca = ((Math.PI/4)*((1*form.estaca.value+5)*(1*form.estaca.value+5))).toFixed(2);
-    var aestacaTd = document.createElement("td");    
-    aestacaTd.textContent = aestaca + " cm²"
+    var aestaca = ((Math.PI/4)*((1*form.estaca.value+5)*(1*form.estaca.value+5))).toFixed(2);  
+   
 
 /////////////////////////////////////////////////////////////////////
     //Angulo rad e graus
    //cálculo do ângulo
     var anguloTeta = Math.sqrt((nkResiste*1.4)/(0.72*alfav2*fcd*aestaca)).toFixed(4);  
-    var anguloTetaTd = document.createElement("td");       
-        anguloTetaTd.textContent = anguloTeta + " rad"
+    
 
     //cálculo do seno do  ângulo
-    var anguloTeta1 = (Math.asin(anguloTeta)*180/Math.PI).toFixed(2)  
-    var anguloTetaTd1 = document.createElement("td");
-        anguloTetaTd1.textContent = anguloTeta1 + " °"
+    var anguloTeta1 = (Math.asin(anguloTeta)*180/Math.PI).toFixed(2)    
+        console.log(anguloTeta1)
 
 
 ////////////////////////////////////////////////////////////////////////////////
     //Exentricidades
     //cálculo das exentricidades 
-    var exentricidadeEx = (eixo/2-form.pilarAp.value/4).toFixed(2);
-   
-    //exentricidade em Y
-    var exentricidadeEy = ((2*form.estaca.value)/(3*Math.PI) - form.pilarBp.value/4).toFixed(2);
-
-    //exentricidade em E  
-    var exentricidadeE = Math.sqrt((exentricidadeEx*exentricidadeEx)+(exentricidadeEy*exentricidadeEy)).toFixed(2);    
+    var exentricidadeEx = (eixo/2-form.pilarAp.value/4).toFixed(2); //excentricidade x 
+    var exentricidadeEy = ((2*form.estaca.value)/(3*Math.PI) - form.pilarBp.value/4).toFixed(2);//excentricidade y
+    var exentricidadeE = Math.sqrt((exentricidadeEx*exentricidadeEx)+(exentricidadeEy*exentricidadeEy)).toFixed(2);  //excentricidade e  
 
 ////////////////////////////////////////////////////////////////////////////////    
     //BRAÇO DE ALAVANCA, ALTURA ÚTIL E ALTURA DO BLOCO
     //braço de alavanca
     var zBraco1 = (exentricidadeE*Math.tan(anguloTeta1*Math.PI/180)).toFixed(2); 
+    
 
     //altura útil 
     var alturaUtil1= (zBraco1/0.8).toFixed(2);         
@@ -64,6 +58,7 @@ function angulo (event) {
   
     //braço de alavanca
     var zBraco = (exentricidadeE*Math.tan(senoNovo*Math.PI/180)).toFixed(2);
+    
  
     //altura útil
     var alturaUtil= (zBraco/0.8).toFixed(2);
@@ -74,8 +69,7 @@ function angulo (event) {
     var alturaH = (alturaUtil*1+5).toFixed(2);
 
     // X BARRA
-    var xBarra = 2*(alturaUtil1-zBraco).toFixed(2);
-    console.log(xBarra)
+    var xBarra = 2*(alturaUtil1-zBraco).toFixed(2);   
 
     //delta X 
     var deltaX = ((xBarra*exentricidadeEx)/zBraco).toFixed(2);
@@ -85,8 +79,7 @@ function angulo (event) {
     
     //árae pilar ampliada 
     var areaAmpliadaPilar = (((form.pilarAp.value/2)+deltaX*1)*((form.pilarBp.value/2)+deltaY*1)).toFixed(2);
-    console.log(areaAmpliadaPilar)
-
+   
     // tensões no área ampliada !    
     var nkRsultadoAmpliado = ((nkResiste*1.4)/(2*areaAmpliadaPilar)).toFixed(3)   
     var tensaoPilarAreaTd = document.createElement("td");
