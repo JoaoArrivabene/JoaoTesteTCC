@@ -104,7 +104,7 @@ function angulo (event) {
     }
 
     // tensões no bloco devido Pilar      
-    var tensaoPilar = ((3*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);    
+    var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);    
     var tensaoPilarTd = document.createElement("td");
     tensaoPilarTd.textContent = tensaoPilar 
 
