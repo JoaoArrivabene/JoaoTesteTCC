@@ -3,7 +3,7 @@ function angulo (event) {
     event.preventDefault();
 
     var form = document.querySelector("#form-adiciona");    
-    var nkest1 =  (1.05*form.forcaNk.value)/2
+    var nkest1 =  (form.forcaNk.value)/2
     var mkest1 =  form.forcaNk1.value
     var eixo =  form.estaca.value*3;
 
@@ -54,7 +54,7 @@ function angulo (event) {
     var senoTr = document.createElement("tr");
     var senoNovo = form.novoSeno.value;
     var senoTd = document.createElement("td");
-    senoTd.textContent =senoNovo;
+    senoTd.textContent =senoNovo + " °";
   
     //braço de alavanca
     var zBraco = (exentricidadeE*Math.tan(senoNovo*Math.PI/180)).toFixed(2);
@@ -63,10 +63,12 @@ function angulo (event) {
     //altura útil
     var alturaUtil= (zBraco/0.8).toFixed(2);
     var alturaUtilTd = document.createElement('td');
-    alturaUtilTd.textContent = alturaUtil;
+        alturaUtilTd.textContent = alturaUtil + " cm";
       
     //altura total do bloco
     var alturaH = (alturaUtil*1+5).toFixed(2);
+    var alturaHTd = document.createElement("td");
+        alturaHTd.textContent = alturaH + " cm";
 
     // X BARRA
     var xBarra = 2*(alturaUtil1-zBraco).toFixed(2);   
@@ -128,6 +130,7 @@ function angulo (event) {
   
     senoTr.appendChild(senoTd); //seno 
     senoTr.appendChild(alturaUtilTd); //altura útil
+    senoTr.appendChild(alturaHTd); //altura total
     senoTr.appendChild(tensaoPilarAreaTd); // tensão do pilar ampliado
     senoTr.appendChild(resistenteTd); // tensão resistente
     senoTr.appendChild(ampliadaTd); // comparação entre as situações   

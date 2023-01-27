@@ -35,7 +35,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 
 /////////////////////////////////////////////////////////////////////////
     //Froças nas Estacas
-    var nkest1 =  (form.forcaNk.value*1.05)/2;
+    var nkest1 =  (form.forcaNk.value)/2;
     var mkest1 =  form.forcaNk1.value;
     var eixo =  form.estaca.value*3;        
          
@@ -100,7 +100,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
         exentricidadeExTd.textContent = exentricidadeEx + " cm";
 
     //exentricidade em Y
-    var exentricidadeEy = ((2*form.estaca.value)/(3*Math.PI) - form.pilarBp.value/4).toFixed(2);
+    var exentricidadeEy = (((2*(1*form.estaca.value+5))/(3*Math.PI)) - form.pilarBp.value/4).toFixed(2);
     var exentricidadeEyTd = document.createElement("td");
         exentricidadeEyTd.textContent = exentricidadeEy + " cm";
 
@@ -256,13 +256,12 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
  
     
 
-const btn = document.querySelector('#recarregar');
+const btn = document.querySelector('.recarregar');
+    btn.addEventListener('click',function(){
+        location.reload
+    })
+   
 
-    this.location.reload;
-
-function disable(x){
-    x.disabled = true;
-}
 
 
 

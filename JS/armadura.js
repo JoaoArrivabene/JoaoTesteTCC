@@ -6,7 +6,7 @@ function armadura (event) {
     var ladoA =  (form.estaca.value * 4 +30).toFixed(1);  //cálculo do lado A    
     var ladoB =  (form.estaca.value*1 + 30).toFixed(2); //cálculo do lado B   
     var dLinha =  5; //altura útil    
-    var nkest1 =  (1.05*form.forcaNk.value)/2
+    var nkest1 =  (form.forcaNk.value)/2
     var mkest1 =  form.forcaNk1.value
     var eixo =  form.estaca.value*3;
 
@@ -15,11 +15,9 @@ function armadura (event) {
     var nkResiste = Math.max(nkest1A,nkest2A); 
                  
     //cálculo do fcd
-
     var fcd =  ((form.fck.value/10)/1.4).toFixed(2);
 
     //cálculo do alfav2
-
     var alfav2 =  (1-(form.fck.value/250)).toFixed(2);
   
   
@@ -27,7 +25,7 @@ function armadura (event) {
     var exentricidadeEx = (eixo/2 - form.pilarAp.value/4).toFixed(2);
 
     //exentricidade em Y
-    var exentricidadeEy = ((2*form.estaca.value)/(3*Math.PI) - form.pilarBp.value/4).toFixed(2);
+    var exentricidadeEy = (((2*(1*form.estaca.value+5))/(3*Math.PI)) - form.pilarBp.value/4).toFixed(2);
 
     //exentricidade em E
     var exentricidadeE = Math.sqrt((exentricidadeEx*exentricidadeEx)+(exentricidadeEy*exentricidadeEy)).toFixed(2);
@@ -44,6 +42,8 @@ function armadura (event) {
 
     //altura total do bloco
     var alturaH = (alturaUtil*1+5).toFixed(2);
+    var alturaHTd = document.createElement("td");
+    alturaHTd.textContent = alturaH + " cm";
 
     //delta X 
     var deltaX = ((0.4*alturaUtil*exentricidadeEx)/zBraco).toFixed(2);
@@ -127,6 +127,7 @@ function armadura (event) {
 
    
     AsTr.appendChild(alturaUtilTd);
+    AsTr.appendChild(alturaHTd);
     AsTr.appendChild(AsXTd);
     AsTr.appendChild(AsXminTd);
     AsTr.appendChild(AsXutiliTd);
