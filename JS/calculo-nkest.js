@@ -35,7 +35,8 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 
 /////////////////////////////////////////////////////////////////////////
     //Froças nas Estacas
-    var nkest1 =  (form.forcaNk.value)/2;
+    var nkest1 =  (1.05*form.forcaNk.value)/2;
+    console.log(nkest1)
     var mkest1 =  form.forcaNk1.value;
     var eixo =  form.estaca.value*3;        
          

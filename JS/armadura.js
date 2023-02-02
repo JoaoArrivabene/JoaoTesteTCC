@@ -52,8 +52,12 @@ function armadura (event) {
 
     var deltaY = ((0.4*alturaUtil*exentricidadeEy)/zBraco).toFixed(2);  
 
+    //Força com o peso do bloco
+    var nkfinal = ((ladoA/100*ladoB/100*alturaH/100*25)+nkResiste).toFixed(2);
+    console.log(nkfinal)
+
     // Aramdura - Asx       
-    var AsX = ((nkResiste*1.4*exentricidadeEx)/(0.8*alturaUtil*(50/1.15))).toFixed(2);
+    var AsX = ((nkfinal*1.4*exentricidadeEx)/(0.8*alturaUtil*(50/1.15))).toFixed(2);
     var AsXTd = document.createElement("td");
     AsXTd.textContent = AsX + " cm²";  
 
@@ -74,13 +78,13 @@ function armadura (event) {
     }
      
     // Aramdura - Asy      
-    var AsY = (((0.5*nkResiste*1.4)*(exentricidadeEy/zBraco+0.2))*(1/(50/1.15))).toFixed(2);
+    var AsY = (((0.5*nkfinal*1.4)*(exentricidadeEy/zBraco+0.2))*(1/(50/1.15))).toFixed(2);
     var AsYTd = document.createElement("td");
     AsYTd.textContent = AsY + " cm²";
 
-
+ 
     // Aramdura - Asy.min       
-    var AsYmin = ((nkResiste*1.4)/(5*(50/1.15))).toFixed(2);
+    var AsYmin = ((nkfinal*1.4)/(5*(50/1.15))).toFixed(2);
     var AsYminTd = document.createElement("td");
     AsYminTd.textContent = AsYmin + " cm²";
 
@@ -111,7 +115,7 @@ function armadura (event) {
     //Aramdura - Aspele
 
     var AsPele = (0.001*(form.estaca.value*1+30)*alturaH).toFixed(2);
-    var AsPele1 =(0.2*(nkResiste*1.4)/(50/1.15)).toFixed(2);
+    var AsPele1 =(0.2*(nkfinal*1.4)/(50/1.15)).toFixed(2);
     var AsPeleTd = document.createElement("td");
 
     if (AsPele>= AsPele1){

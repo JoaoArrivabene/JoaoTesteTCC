@@ -3,7 +3,7 @@ function angulo (event) {
     event.preventDefault();
 
     var form = document.querySelector("#form-adiciona");    
-    var nkest1 =  (form.forcaNk.value)/2
+    var nkest1 =  (1.05*form.forcaNk.value)/2
     var mkest1 =  form.forcaNk1.value
     var eixo =  form.estaca.value*3;
 
@@ -85,12 +85,12 @@ function angulo (event) {
     // tensões no área ampliada !    
     var nkRsultadoAmpliado = ((nkResiste*1.4)/(2*areaAmpliadaPilar)).toFixed(3)   
     var tensaoPilarAreaTd = document.createElement("td");
-    tensaoPilarAreaTd.textContent = nkRsultadoAmpliado; 
+    tensaoPilarAreaTd.textContent = nkRsultadoAmpliado + " kN/cm²"; 
 
     // tensões resistente do bloco
     var resistente = ((0.85*alfav2*fcd)*(Math.sin((senoNovo*Math.PI/180))*Math.sin((senoNovo*Math.PI/180)))).toFixed(3);  
     var resistenteTd = document.createElement("td");
-    resistenteTd.textContent = resistente; 
+    resistenteTd.textContent = resistente + " kN/cm²"; 
 
 
     //situação ÁREA AMPLIADA DO PILAR 
@@ -108,12 +108,12 @@ function angulo (event) {
     // tensões no bloco devido Pilar      
     var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);    
     var tensaoPilarTd = document.createElement("td");
-    tensaoPilarTd.textContent = tensaoPilar 
+    tensaoPilarTd.textContent = tensaoPilar + " kN/cm²" 
 
     // tensões resistente do bloco
     var resistente1 = resistente 
     var resistente1Td = document.createElement("td");
-    resistente1Td.textContent = resistente1;
+    resistente1Td.textContent = resistente1  + " kN/cm²";
 
 
     //situação NBR 

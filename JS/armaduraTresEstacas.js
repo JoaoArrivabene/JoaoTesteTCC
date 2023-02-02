@@ -6,10 +6,12 @@ function armadura (event) {
     var ladoB =  ((form.estaca.value*1/2+15)/(Math.cos(26*Math.PI/180))).toFixed(0); //cálculo do lado B  
     var ladoA =  (form.estaca.value*3 + 1*ladoB).toFixed(0);  //cálculo do lado A     
     var dLinha =  5; //altura útil    
-    var nkest1 =  (1.05*form.forcaNk.value)/3
+    var nkest1 =  (form.forcaNk.value)/3
     var mkest1 =  form.forcaNk1.value
     var mkest2 =  form.forcaNk2.value
+    //var eixo = 80
     var eixo =  form.estaca.value*3;
+    //var comprimentoL =135;
     var comprimentoL =Math.sqrt((eixo*eixo)-((eixo/2)*(eixo/2))).toFixed(0);
          
 
@@ -28,7 +30,7 @@ function armadura (event) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Excentricidades  
     //cálculo das exentricidades ESTACA FRONTAL
-    var exentricidadeEx = (((2*form.estaca.value)/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2); //exentricidade em X   
+    var exentricidadeEx = (((2*(5+1*form.estaca.value))/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2); //exentricidade em X   
     var exentricidadeEy = (((comprimentoL*2)/3)+((form.pilarAp.value/3)/2)-(1*form.pilarAp.value/2)).toFixed(2); //exentricidade em Y    
     var exentricidadeE = Math.sqrt((exentricidadeEx*exentricidadeEx)+(exentricidadeEy*exentricidadeEy)).toFixed(2); //exentricidade em E
     
@@ -47,22 +49,36 @@ function armadura (event) {
     
     //altura total do bloco
     var alturaH = (alturaUtil*1+5).toFixed(2);
+    var alturaHTd = document.createElement("td");
+        alturaHTd.textContent = alturaH + " cm"
 
     //delta X 
     var deltaX = ((0.4*alturaUtil*exentricidadeEx)/zBraco).toFixed(2);
       
-    //delta y 
-
+    //delta y
     var deltaY = ((0.4*alturaUtil*exentricidadeEy)/zBraco).toFixed(2);  
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //ARMADURAS 
+    //PESO DO BLOCO
+
+    var Area1 = ((((comprimentoL/100)))+(((form.estaca.value/100)/2)+(15/100)))*(ladoB/100); //retangulo meio            
+    var Area2 = (eixo/100+form.estaca.value/100+30/100)*(((form.estaca.value/100)/2)+15/100); //retangulo baixo           
+    var Area3 = (Math.sqrt(((ladoB/100)*(ladoB/100))-((((form.estaca.value/100)/2)+15/100)*(((form.estaca.value/100)/2)+15/100))))*(((form.estaca.value/100)/2)+15/100) //subtrair1
+               
+    var lado1 = ((eixo/100+(((form.estaca.value/100)+30/100)))-ladoB/100)/2
+    var lado2 = ((((comprimentoL/100)))+(((form.estaca.value/100)/2)+(15/100)))
+    var Area4 = lado1*lado2
+   
+    var AreaTotal = (Area1+Area2-Area3+Area4).toFixed(2);      
+    var ConcretoKg = (AreaTotal*alturaH/100).toFixed(2);
+
+    var nkfinal = ((ConcretoKg*25)+nkResiste).toFixed(2); 
 
     // CÁLCULO DAS DISTRIBIÇÕES DAS FORÇAS EM SUAS DECOMPOSIÇÕES    
-    var NK1 = ((nkResiste*exentricidadeE)/zBraco).toFixed(2);
+    var NK1 = ((nkfinal*exentricidadeE)/zBraco).toFixed(2);
 
-    var NK2X = ((nkResiste*exentricidadeEx1)/zBraco).toFixed(2); //TRIÂNGULO EM X
-    var NK2Y = ((nkResiste*exentricidadeEy1)/zBraco).toFixed(2); //TRIÂNGULO EM Y
+    var NK2X = ((nkfinal*exentricidadeEx1)/zBraco).toFixed(2); //TRIÂNGULO EM X
+    var NK2Y = ((nkfinal*exentricidadeEy1)/zBraco).toFixed(2); //TRIÂNGULO EM Y
     var anguloNK1 =  (Math.atan((eixo/2)/comprimentoL)*180/Math.PI).toFixed(2);
     
 
@@ -70,9 +86,12 @@ function armadura (event) {
     var NKT = (NK2X/(Math.cos(anguloNK1*Math.PI/180))).toFixed(2);
     var NKTX = (NK2X - NKT*Math.sin(anguloNK1*Math.PI/180)).toFixed(2);
 
-    console.log(NKT1)
+    console.log(NK1 + "força principal")
+    console.log(anguloNK1 + "angulo cosseno")
+    console.log(NKT1 + "força diagonal")
 
-     // Armadura AS1
+    //ARMADURAS
+    //Armadura AS1
     var As1 = (2*((NKT1*1.4)/(50/1.15))).toFixed(2);
     var As1Td = document.createElement("td");
     As1Td.textContent = As1 + " cm²";  
@@ -87,8 +106,25 @@ function armadura (event) {
     var Zrt = 0.6*(alturaH-0.4*alturaUtil)    
     var b0 = ((1*form.estaca.value+ 5)*2).toFixed(2);
     var fctm = (0.3*Math.pow(form.fck.value,(2/3))).toFixed(3); 
-    var Rctd = (0.8*(alturaH-0.4*alturaUtil)*(fctm/10)*b0).toFixed(2);  
+
+
+    //Angulo rad e graus
+    //cálculo do ângulo
+    var aestaca = ((Math.PI/4)*((1*form.estaca.value+5)*(1*form.estaca.value+5))).toFixed(2);
+    var anguloTeta = Math.sqrt((nkResiste*1.4)/(0.72*alfav2*fcd*aestaca)).toFixed(4);  
+    var anguloTeta1 = (Math.asin(anguloTeta)*180/Math.PI).toFixed(2);
+
+    //BRAÇO DE ALAVANCA, ALTURA ÚTIL E ALTURA DO BLOCO
+    //braço de alavanca
+    var zBraco1 = (exentricidadeE*Math.tan(anguloTeta1*Math.PI/180)).toFixed(2); 
+
+    //altura útil 
+    var alturaUtil1= (zBraco1/0.8).toFixed(2);  
+    // X BARRA
+    var xBarra = 2*(alturaUtil1-zBraco).toFixed(2);
+    var Rctd = (0.8*(alturaH-xBarra)*(fctm/10)*b0).toFixed(2);  
     var Asmin = ((Rctd*Zrt)/((alturaUtil-((0.4*alturaUtil)/2))*(50/1.15))).toFixed(2);
+    console.log (xBarra + "cm")
 
     var AsminTd = document.createElement("td");
     AsminTd.textContent =  Asmin+ " cm²";  
@@ -119,6 +155,7 @@ function armadura (event) {
     AsMalhaTd.textContent = AsMalha + " cm²";
    
     AsTr.appendChild(alturaUtilTd);
+    AsTr.appendChild(alturaHTd);
     AsTr.appendChild(As1Td);
     AsTr.appendChild(As2Td);
     AsTr.appendChild(AsminTd);
@@ -410,22 +447,9 @@ function armadura (event) {
             var ComprimentoConcretoTd = document.createElement("td");
                 ComprimentoConcretoTd.textContent ="Total Concreto";
             
-        //Aço kg
+        //Concreto kg
 
-            var Area1 = ((((comprimentoL/100)))+(((form.estaca.value/100)/2)+(15/100)))*(ladoB/100); //retangulo meio            
-            var Area2 = (eixo/100+form.estaca.value/100+30/100)*(((form.estaca.value/100)/2)+15/100); //retangulo baixo           
-            var Area3 = (Math.sqrt(((ladoB/100)*(ladoB/100))-((((form.estaca.value/100)/2)+15/100)*(((form.estaca.value/100)/2)+15/100))))*(((form.estaca.value/100)/2)+15/100) //subtrair1
-            
-           
-            var lado1 = ((eixo/100+(((form.estaca.value/100)+30/100)))-ladoB/100)/2
-            var lado2 = ((((comprimentoL/100)))+(((form.estaca.value/100)/2)+(15/100)))
-            var Area4 = lado1*lado2
-           
-            var AreaTotal = (Area1+Area2-Area3+Area4).toFixed(2);
-            console.log(AreaTotal)
-       
-            var ConcretoKg = (AreaTotal*alturaH/100).toFixed(2)
-            var ConcretoTd = document.createElement("td");
+        var ConcretoTd = document.createElement("td");
                 ConcretoTd.textContent = ConcretoKg + " m³"; 
                 
                 

@@ -10,6 +10,7 @@ function angulo (event) {
     var mkest1 =  form.forcaNk1.value
     var mkest2 =  form.forcaNk2.value
     var eixo =  form.estaca.value*3;
+    //var comprimentoL =135;
     var comprimentoL =Math.sqrt((eixo*eixo)-((eixo/2)*(eixo/2))).toFixed(0);
          
 
@@ -47,17 +48,10 @@ function angulo (event) {
 ////////////////////////////////////////////////////////////////////////////////
     //Exentricidades
     //cálculo das exentricidades 
-    var exentricidadeEx = (((2*form.estaca.value)/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2); //exentricidade em X   
+    var exentricidadeEx = (((2*(1*form.estaca.value+5))/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2); //exentricidade em X   
     var exentricidadeEy = (((comprimentoL*2)/3)+((form.pilarAp.value/3)/2)-(1*form.pilarAp.value/2)).toFixed(2); //exentricidade em Y    
     var exentricidadeE = Math.sqrt((exentricidadeEx*exentricidadeEx)+(exentricidadeEy*exentricidadeEy)).toFixed(2); //exentricidade em E
 
-    console.log( nkResiste + "kN")
-    console.log(fcd + "kN/cm²")
-    console.log(alfav2)
-    console.log(anguloTeta + "radianos")
-    console.log(anguloTeta1 + "graus")
-    
-    console.log(exentricidadeE +"cm")
     
 ////////////////////////////////////////////////////////////////////////////////    
     //BRAÇO DE ALAVANCA, ALTURA ÚTIL E ALTURA DO BLOCO
@@ -83,11 +77,12 @@ function angulo (event) {
       
     //altura total do bloco
     var alturaH = (alturaUtil*1+5).toFixed(2);
+    var alturaHTd = document.createElement("td");
+        alturaHTd.textContent = alturaH + " cm"
 
     // X BARRA
     var xBarra = 2*(alturaUtil1-zBraco).toFixed(2);
-    console.log(xBarra)
-
+  
     //delta X 
     var deltaX = ((xBarra*exentricidadeEx)/zBraco).toFixed(2);
       
@@ -95,11 +90,10 @@ function angulo (event) {
     var deltaY = ((xBarra*exentricidadeEy)/zBraco).toFixed(2);
     
     //árae pilar ampliada     
-    var areaAmpliadaPilar = (((form.pilarAp.value/3)+deltaX*1)*((form.pilarBp.value/2)+deltaY*1)).toFixed(2);
-    console.log(areaAmpliadaPilar)
+    var areaAmpliadaPilar = 2*(((form.pilarAp.value/3)+deltaY*1)*((form.pilarBp.value/2)+deltaX*1)).toFixed(2);
 
     // tensões no área ampliada !    
-    var nkRsultadoAmpliado = ((nkResiste*1.4)/(2*areaAmpliadaPilar)).toFixed(3)   
+    var nkRsultadoAmpliado = ((nkResiste*1.4)/(areaAmpliadaPilar)).toFixed(3)   
     var tensaoPilarAreaTd = document.createElement("td");
     tensaoPilarAreaTd.textContent = nkRsultadoAmpliado; 
 
@@ -145,7 +139,8 @@ function angulo (event) {
     }
   
     senoTr.appendChild(senoTd); //seno 
-    senoTr.appendChild(alturaUtilTd); //altura útil
+    senoTr.appendChild(alturaUtilTd); //altura útil    
+    senoTr.appendChild(alturaUtilTd); //altura total
     senoTr.appendChild(tensaoPilarAreaTd); // tensão do pilar ampliado
     senoTr.appendChild(resistenteTd); // tensão resistente
     senoTr.appendChild(ampliadaTd); // comparação entre as situações   

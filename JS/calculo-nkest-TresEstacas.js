@@ -37,11 +37,12 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 
 /////////////////////////////////////////////////////////////////////////
     //Froças nas Estacas
-    var nkest1 =  (form.forcaNk.value*1.05)/3;
+    var nkest1 =  (1.05*form.forcaNk.value)/3;
     var mkest1 =  form.forcaNk1.value;
     var mkest2 =  form.forcaNk2.value;
 
     //Comprimento L de bloco
+    //var comprimentoL =135;
     var comprimentoL =Math.sqrt((eixoEstaca*eixoEstaca)-((eixoEstaca/2)*(eixoEstaca/2))).toFixed(0);
     var comprimentoLTd = document.createElement('td');
         comprimentoLTd.textContent = comprimentoL + " cm";
@@ -111,7 +112,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
     //Exentricidades
     //cálculo das exentricidades ESTACA FRONTAL
     //exentricidade em x
-    var exentricidadeEx = (((2*form.estaca.value)/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2)  
+    var exentricidadeEx = (((2*(1*form.estaca.value+5))/(3*Math.PI))-(form.pilarBp.value/4)).toFixed(2)  
     var exentricidadeExTd = document.createElement("td");
         exentricidadeExTd.textContent = exentricidadeEx + " cm";
 
@@ -180,7 +181,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
     deltaYTd.textContent = deltaY + " cm";  
 
     //árae pilar ampliada  
-    var areaAmpliadaPilar = (((form.pilarAp.value/3)+deltaX*1)*((form.pilarBp.value/2)+deltaY*1)).toFixed(2);    
+    var areaAmpliadaPilar = 2*(((form.pilarAp.value/3)+deltaY*1)*((form.pilarBp.value/2)+deltaX*1)).toFixed(2);    
     var areaAmpliadaPilarTd = document.createElement("td");    
     areaAmpliadaPilarTd.textContent = areaAmpliadaPilar + " cm²";  
 
@@ -212,7 +213,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
         tensaoPilarTd.textContent = tensaoPilar + " kN/cm²";
 
     // tensões no área ampliada !   
-    var nkRsultadoAmpliado = ((nkResiste*1.4)/(2*areaAmpliadaPilar)).toFixed(3)   
+    var nkRsultadoAmpliado = ((nkResiste*1.4)/(areaAmpliadaPilar)).toFixed(3)   
     var tensaoPilarAreaTd = document.createElement("td");
         tensaoPilarAreaTd.textContent = nkRsultadoAmpliado + " kN/cm²";
 
