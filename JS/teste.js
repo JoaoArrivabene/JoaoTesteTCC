@@ -81,6 +81,7 @@ function angulo (event) {
     
     //árae pilar ampliada 
     var areaAmpliadaPilar = (((form.pilarAp.value/2)+deltaX*1)*((form.pilarBp.value/2)+deltaY*1)).toFixed(2);
+    console.log(areaAmpliadaPilar)
    
     // tensões no área ampliada !    
     var nkRsultadoAmpliado = ((nkResiste*1.4)/(2*areaAmpliadaPilar)).toFixed(3)   
@@ -106,7 +107,7 @@ function angulo (event) {
     }
 
     // tensões no bloco devido Pilar      
-    var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);    
+    var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);        
     var tensaoPilarTd = document.createElement("td");
     tensaoPilarTd.textContent = tensaoPilar + " kN/cm²" 
 
