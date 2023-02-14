@@ -27,7 +27,7 @@
             
            
        		<ul class = "dados">
-                <h3>BLOCO SOBRE TRÊS ESTACAS</h3><br>           
+                <h3>BLOCO SOBRE DUAS ESTACAS</h3><br>           
 			
             <ul class = "pilaresAPeBP">
             <h5>Pilar</h5>
@@ -61,11 +61,9 @@
 			<label class="textos-As">Nk:</label>
 			<input id="nk" name="forcaNk" type="number" placeholder="Valor em kN" class="as-input-angulo">
             <br><br>
-			<label class="textos-As">Mk.x:</label>
+			<label class="textos-As">Mk:</label>
 			<input id="mk" name="forcaNk1" type="number" placeholder="Valor em kN*m" class="as-input-angulo"><br><br>
-            <label class="textos-As">Mk.y:</label>
-			<input id="mk" name="forcaNk2" type="number" placeholder="Valor em kN*m" class="as-input-angulo"><br><br>
-           
+            
 		    </ul><br>
             
             
@@ -102,12 +100,11 @@
                         <th>lado B</th>
                         <th>eixo</th>
                         <th>d'</th>
-                        <th>θ</th>
+                        <th>sen θ</th>
                         <th>sen θ</th>
                         <th>z</th>
                         <th>d</th>
                         <th>h</th>
-                        <th>l</th>
                         <th>fcd</th>
                         <th>αv2</th>
                      
@@ -115,7 +112,7 @@
                 </thead>
             </table>
             <br>
-            <img src="Fotos/geometria-3estacas.svg" class="imagem-forcas-e-area1"><br><br>
+            <img src="Fotos/geometria-total.svg" class="imagem-forcas-e-area"><br><br>
 
             <h3>FORÇAS, EXCENTRICIDADES E ÁREAS AMPLIADAS</h3>
             <br>
@@ -124,8 +121,7 @@
                 <thead>
                      <tr>
                         <th>Nk.est.1</th>
-                        <th>Nk.est.2</th>4
-                        <th>Nk.est.3</th>
+                        <th>Nk.est.2</th>
                         <th>Nk.est.k</th>
                         <th>Nk.est.adm</th>
                         <th>Aest.amp</th>        
@@ -140,13 +136,14 @@
                 </thead>
             </table>
             <br>
-            <img src="Fotos/forcas-exentricidades3estacas.svg" class="imagem-forcas-e-area"><br><br>
+            <img src="Fotos/forcas-exentricidades.svg" class="imagem-forcas-e-area"><br><br>
 
             <h3>TENSÕES E SITUAÇÕES DE RESISTÊNCIA</h3>
             <br>
             <table id ="tabela-tensoes">
                 <thead>
-                     <tr>                       
+                     <tr>
+                       
                         <th>σ.amp.pil.d</th>
                         <th>σ.pil.u.d</th>
                         <th>Nk.est.adm ≥ Nk.est.k</th>
@@ -191,7 +188,7 @@
                             <th>σ.amp.pil.d</th>
                             <th>σ.pil.u</th>
                             <th>M.Geral</th>                            
-                           
+                            
                       														
                         </tr>
             
@@ -214,11 +211,13 @@
                         <input name="alturaUtilNova" type="number" placeholder="Altura útil" class="as-input">
                         <br><br>
                         
-                        <label class="textos-As">Barra As.utili:</label>
+                        <label class="textos-As">Barra As.x:</label>
                         <input name="asx" type="number" placeholder="Barra Ø mm" class="as-input">
                         
                   
-                  
+                        <label class="textos-As">Barra As.y:</label>
+                        <input name="asy" type="number" placeholder="Barra Ø mm" class="as-input">
+                        <br><br>
                        
                         <label class="textos-As">Barra As.sup:</label>
                         <input name="assup" type="number" placeholder="Barra Ø mm" class="as-input">
@@ -226,15 +225,15 @@
                         
                         <label class="textos-As">Barra As.pele:</label>
                         <input name="aspele" type="number" placeholder="Barra Ø mm" class="as-input">
-                        <br><br>
                         
                      
-                        <label class="textos-As">Barra As.Malha:</label>
+                        <label class="textos-As">Barra Asw:</label>
                         <input name="asw" type="number" placeholder="Barra Ø mm" class="as-input">                   
                                                      
                         <br><br><br>
 
                         <button onclick id="armadura-tabela">Calcular As</button>
+                   
                         
                         <br><br>
 
@@ -246,14 +245,15 @@
                             <tr class="armaduras">
                                 <th>d</th>
                                 <th>h</th>
-                                <th>As.1</th>
-                                <th>As.2</th>
-                                <th>As.min</th>	
-                                <th>As.utili</th>
-                                <th>As.sup</th>
+                                <th>As.1x</th>
+                                <th>Asx.min</th>
+                                <th>As.x.utili</th>	
+                                <th>As.1y</th>
+                                <th>Asy.min</th>
+                                <th>As.y.utili</th>
+                                <th>As.sup</th>	
                                 <th>As.pele</th>
-                                <th>As.malha</th>
-                            													
+                                <th>Asw</th>													
                             </tr>
                 
                         </thead>
@@ -303,7 +303,7 @@
             <h3>POSIÇÕES DAS ARMADURAS CALCULADAS</h3><br>          
    
               
-                <img src="Fotos/planta3estaca.svg" class="imagem-planta-geral1">  
+                <img src="Fotos/planta.svg" class="imagem-planta-geral">  
                 <br><br>
 
                 
@@ -315,9 +315,9 @@
     
 </section>
 
-<script src="JS/3Estacas-Geometria.js"></script>
-<script src="JS/3Estacas-Otimizacao.js"></script>
-<script src="JS/3Estacas-Armaduras.js"></script>
+<script src="JS/2Estacas-Geometria.js"></script>
+<script src="JS/2Estacas-Otimizacao.js"></script>
+<script src="JS/2Estacas-Armaduras.js"></script>
 
 
 <footer class = "roda-pe">

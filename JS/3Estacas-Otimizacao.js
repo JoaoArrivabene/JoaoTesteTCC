@@ -73,12 +73,12 @@ function angulo (event) {
     //altura útil
     var alturaUtil= (zBraco/0.8).toFixed(2);
     var alturaUtilTd = document.createElement('td');
-    alturaUtilTd.textContent = alturaUtil;
+        alturaUtilTd.textContent = alturaUtil;
       
     //altura total do bloco
-    var alturaH = (alturaUtil*1+5).toFixed(2);
+    var haltura = (1*alturaUtil+5).toFixed(2);
     var alturaHTd = document.createElement("td");
-        alturaHTd.textContent = alturaH + " cm"
+        alturaHTd.textContent = haltura + " cm"
 
     // X BARRA
     var xBarra = 2*(alturaUtil1-zBraco).toFixed(2);
@@ -116,37 +116,37 @@ function angulo (event) {
     }
 
     // tensões no bloco devido Pilar      
-    var tensaoPilar = ((3*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);    
-    var tensaoPilarTd = document.createElement("td");
-    tensaoPilarTd.textContent = tensaoPilar 
+    //var tensaoPilar = ((3*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);    
+    //var tensaoPilarTd = document.createElement("td");
+    //tensaoPilarTd.textContent = tensaoPilar 
 
     // tensões resistente do bloco
-    var resistente1 = resistente 
-    var resistente1Td = document.createElement("td");
-    resistente1Td.textContent = resistente1;
+    //var resistente1 = resistente 
+    //var resistente1Td = document.createElement("td");
+    //resistente1Td.textContent = resistente1;
 
 
     //situação NBR 
-    var resistenteNBRTd = document.createElement("td");  
+    //var resistenteNBRTd = document.createElement("td");  
 
-    if (resistente >= tensaoPilar ){
-        resistenteNBRTd.textContent = " Resiste ";
-        resistenteNBRTd.style.backgroundColor = "lightblue"           
-    }else{
-        resistenteNBRTd.textContent = " Não resiste";
-        resistenteNBRTd.style.backgroundColor = "lightcoral"
+    //if (resistente >= tensaoPilar ){
+        //resistenteNBRTd.textContent = " Resiste ";
+        //resistenteNBRTd.style.backgroundColor = "lightblue"           
+   //}else{
+       // resistenteNBRTd.textContent = " Não resiste";
+        //resistenteNBRTd.style.backgroundColor = "lightcoral"
         
-    }
+    //}
   
     senoTr.appendChild(senoTd); //seno 
     senoTr.appendChild(alturaUtilTd); //altura útil    
-    senoTr.appendChild(alturaUtilTd); //altura total
+    senoTr.appendChild(alturaHTd); //altura total
     senoTr.appendChild(tensaoPilarAreaTd); // tensão do pilar ampliado
     senoTr.appendChild(resistenteTd); // tensão resistente
     senoTr.appendChild(ampliadaTd); // comparação entre as situações   
-    senoTr.appendChild(tensaoPilarTd); // tensão NBR
-    senoTr.appendChild(resistente1Td); //tensão resistente novamente
-    senoTr.appendChild(resistenteNBRTd); //comparação entre as situações
+    //senoTr.appendChild(tensaoPilarTd); // tensão NBR
+    //senoTr.appendChild(resistente1Td); //tensão resistente novamente
+    //senoTr.appendChild(resistenteNBRTd); //comparação entre as situações
 
     var tabelaSeno = document.querySelector('#alternado-seno-d');
     tabelaSeno.appendChild(senoTr); 

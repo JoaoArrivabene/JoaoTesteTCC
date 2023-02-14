@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="CSS/reset.css">
+        <link rel="stylesheet" href="CSS/pagina-total.css">
+        <link rel="stylesheet" href="CSS/botoes.css">
+        <link rel="stylesheet" href="CSS/inputs.css">
+        <link rel="stylesheet" href="CSS/titulos.css">
+        <link rel="stylesheet" href="CSS/escopo-calculos.css">
+        <link rel="stylesheet" href="CSS/relatorios.css">
+       
+
+
+	</head>
+
+<body>
+
+ 
+<section class="dadosParaEstaca">
+
+ 
+	
+	<form id="form-adiciona">
+
+		<div class="grupo">
+            
+           
+       		<ul class = "dados">
+                <h3>BLOCO SOBRE DUAS ESTACAS - COMAPATIVOS ENTRE METÓDOS</h3><br>           
+			
+            <ul class = "pilaresAPeBP">
+            <h5>Pilar</h5>
+            
+			<label class="textos-As">ap:</label>
+			<input id="pilar-Ap" name="pilarAp" type="number" placeholder="Maior seção em cm" class="as-input-pilar">
+            <br><br>
+			<label class="textos-As">bp:</label>
+			<input id="pilar-Bp" name="pilarBp"type="number" placeholder="Menor seção em cm" class="as-input-pilar">
+            
+            </ul>
+
+			
+				
+            <ul class = "diametroEstaca"> 
+            <h6 >Estaca</h6>
+                      
+			<label class="textos-As">Øest.:</label>
+			<input id="diametroEstaca" name="estaca" type="number" placeholder="Ø da estaca mm" class="as-input-angulo">
+            <br><br>
+			<label class="textos-As">Nest.k:</label>
+			<input id="capacidadeEstaca" name="Nestd" type="number" placeholder="Capacidade em kN" class="as-input-angulo">
+            
+            </ul><br>
+            <br>
+		  		
+		    
+            <ul class ="forcaemomento">
+            <h7 >Carregamentos</h7>
+            <br>
+			<label class="textos-As">Nk:</label>
+			<input id="nk" name="forcaNk" type="number" placeholder="Valor em kN" class="as-input-angulo">
+            <br><br>
+			<label class="textos-As">Mk:</label>
+			<input id="mk" name="forcaNk1" type="number" placeholder="Valor em kN*m" class="as-input-angulo"><br><br>
+            
+		    </ul><br>
+            
+            
+			
+            <ul class = "dadosfck">
+            <h8>Concreto</h8>
+            <br>     
+			<label class="textos-As">fck:</label>
+			<input id="fck" name="fck" type="number" placeholder="Concreto em MPa" class="as-input-angulo">                      
+			</ul>
+            
+            <br>
+            
+            
+            <button id="calculaBloco2">Calcular</button> <br><br><br>        
+            <button id="calculaBloco5" class="recarregar">Limpar</button>
+           
+            </ul> 
+                 
+            </ul>
+                      	         
+		</div><br>
+
+        <div> <ul class = "geometria-blocoTotal">
+            
+            <h3>GEOMETRIA</h3>
+            <br>
+
+            <table id ="tabela-geometria">
+                <thead>
+                    <tr>
+                     
+                        <th>eixo</th>
+                        <th>d.mín(45°)</th>                      
+                        <th>d.máx(55°)</th>                    
+                                           
+                    </tr>
+                </thead>
+            </table>
+            <br>
+            <img src="Fotos/geometria-comparativo.svg" class="imagem-forcas-e-area"><br><br>
+
+            <h3>COMPARTIVOS DAS TENSÕES E ARMADURAS</h3><br> 
+
+            <h4>Determine uma altura útil</h4><br>                                       
+                                            
+            <ul class="variacao-seno">                    
+                                                                                  
+            <label class="textos-As-movel">d:</label>
+            <input name="alturaD" type="number" placeholder="Insira o altura útil" class="as-input-angulo-movel">
+                                                 
+           
+            </ul> 
+            <br><br>
+            <button onclick id="angulo-calculo">Verificar</button>                
+            <br><br><br> 
+
+            BLÉVOT
+            <table id="tabela-blevot">
+                <thead>
+        
+                    <tr class="otimizacao-seno">
+                        <th>σcd.pil</th>
+                        <th>σcd.est</th>                           
+                        <th>σcd.lim</th>
+                                                 
+                    </tr>
+        
+                </thead>        
+                    
+            </table><br>
+
+            PROFº GRAZIANO
+            <table id="tabela-graziano">
+                <thead>
+        
+                    <tr class="otimizacao-seno">
+                        <th>σcd.pil</th>
+                        <th>σcd.est</th>                           
+                        <th>σcd.lim</th>
+                                                 
+                    </tr>
+        
+                </thead>        
+                    
+            </table><br>
+           
+            <br>
+
+            ARMADURAS
+            <table id="alternado-seno-d">
+                <thead>
+        
+                    <tr class="otimizacao-seno">
+                        <th>As.Blevot</th>
+                        <th>As.Graziano</th>                           
+                        <th>Taxa de comparação</th>
+                                                 
+                    </tr>
+        
+                </thead>        
+                    
+            </table><br>
+           
+            <br><br>
+
+
+           
+
+    </form>
+    
+</section>
+
+<script src="JS/Comparativo-2estacas.JS"></script>
+<script src="JS/Comparativo-2Estacas-Tensoes.JS"></script>
+
+
+<footer class = "roda-pe">
+    <img src="Fotos/logoPECE.png" alt="Logo PECE">
+    <p class="copyright">Trabalho de conclusão de curso</p>
+    <p>São Paulo 2023</p>
+</footer>
+
+
+</html>
+
+

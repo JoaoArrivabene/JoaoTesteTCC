@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="CSS/reset.css">
+        <link rel="stylesheet" href="CSS/pagina-total.css">
+        <link rel="stylesheet" href="CSS/botoes.css">
+        <link rel="stylesheet" href="CSS/inputs.css">
+        <link rel="stylesheet" href="CSS/titulos.css">
+        <link rel="stylesheet" href="CSS/escopo-calculos.css">
+        <link rel="stylesheet" href="CSS/relatorios.css">
+       
+
+
+	</head>
+
+<body>
+
+ 
+<section class="dadosParaEstaca">
+
+ 
+	
+	<form id="form-adiciona">
+
+		
+		<div class="grupo">
+            
+           
+            <ul class = "dados">
+             <h3>BLOCO SOBRE TRÊS ESTACAS</h3><br>           
+         
+         <ul class = "pilaresAPeBP">
+         <h5>Pilar</h5>
+         
+         <label class="textos-As">ap:</label>
+         <input id="pilar-Ap" name="pilarAp" type="number" placeholder="Maior seção em cm" class="as-input-pilar">
+         <br><br>
+         <label class="textos-As">bp:</label>
+         <input id="pilar-Bp" name="pilarBp"type="number" placeholder="Menor seção em cm" class="as-input-pilar">
+         
+         </ul>
+
+         
+             
+         <ul class = "diametroEstaca"> 
+         <h6 >Estaca</h6>
+                   
+         <label class="textos-As">Øest.:</label>
+         <input id="diametroEstaca" name="estaca" type="number" placeholder="Ø da estaca mm" class="as-input-angulo">
+         <br><br>
+         <label class="textos-As">Nest.k:</label>
+         <input id="capacidadeEstaca" name="Nestd" type="number" placeholder="Capacidade em kN" class="as-input-angulo">
+         
+         </ul><br>
+         <br>
+               
+         
+         <ul class ="forcaemomento">
+         <h7 >Carregamentos</h7>
+         <br>
+         <label class="textos-As">Nk:</label>
+         <input id="nk" name="forcaNk" type="number" placeholder="Valor em kN" class="as-input-angulo">
+         <br><br>
+         <label class="textos-As">Mk.x:</label>
+         <input id="mk" name="forcaNk1" type="number" placeholder="Valor em kN*m" class="as-input-angulo"><br><br>
+         <label class="textos-As">Mk.y:</label>
+         <input id="mk" name="forcaNk2" type="number" placeholder="Valor em kN*m" class="as-input-angulo"><br><br>
+        
+         </ul><br>
+         
+         
+         
+         <ul class = "dadosfck">
+         <h8>Concreto</h8>
+         <br>     
+         <label class="textos-As">fck:</label>
+         <input id="fck" name="fck" type="number" placeholder="Concreto em MPa" class="as-input-angulo">                      
+         </ul>
+         
+         <br>
+         
+         
+         <button id="calculaBloco2">Calcular</button> <br><br><br>        
+         <button id="calculaBloco5" class="recarregar">Limpar</button>
+        
+         </ul> 
+              
+         </ul>
+                                
+     </div><br>
+
+        
+        <div> <ul class = "geometria-blocoTotal">
+            
+            <h3>GEOMETRIA E CONCRETO</h3>
+            <br>
+
+            <table id ="tabela-geometria">
+                <thead>
+                    <tr>
+                        <th>lado A</th>
+                        <th>lado B</th>
+                        <th>eixo</th>  
+                        <th>d'</th>                       
+                        <th>fcd</th>
+                        <th>d.mín(45°)</th>                      
+                        <th>d.máx(55°)</th> 
+                        <th>Aest</th>                         
+                        <th>A.pil</th> 
+                        <th>Nk.est.k</th>
+                        <th>Nk.est.adm</th>
+                      
+                    </tr>
+                </thead>
+            </table>
+            <br>
+            <img src="Fotos/geometria-3estacas-blevot.svg" class="imagem-forcas-e-area"><br><br>
+
+           
+            
+            
+            </div> <br>
+
+
+
+            <div class="armadura-bloco-otimizacao"> 
+                
+
+
+                <h3>CÁLCULO DAS ARMADURAS</h3><br>
+
+                <h4>Insira o valor da altura útil calculada.</h4><br>
+                
+                <ul id="tabela-final">
+                                      
+                        
+                        <label class="textos-As">d:</label>
+                        <input name="alturaUtilNova" type="number" placeholder="Altura útil" class="as-input">
+                        <br><br>
+                        
+                        <label class="textos-As">Barra As.x:</label>
+                        <input name="asx" type="number" placeholder="Barra Ø mm" class="as-input">
+                        
+                        <label class="textos-As">Barra As.sup:</label>
+                        <input name="assup" type="number" placeholder="Barra Ø mm" class="as-input">
+                        
+                        <label class="textos-As">Barra As.pele:</label>
+                        <input name="aspele" type="number" placeholder="Barra Ø mm" class="as-input">
+                        
+                      
+                        <br><br>                     
+                                                
+                     
+                        <label class="textos-As">Barra Asw:</label>
+                        <input name="asw" type="number" placeholder="Barra Ø mm" class="as-input">                   
+                                                     
+                        <br><br><br>
+
+                        <button onclick id="armadura-tabela">Calcular As</button>
+                   
+                        
+                        <br><br>
+
+
+                    TENSÕES <br>   
+                    <table id ="tabela-tensoes">
+                        <thead>
+                            <tr>
+                            
+                                <th>σ.pil.d</th>
+                                <th>σ.est.d</th>
+                                <th>σ.u.d</th>
+                                <th>Nk.est.adm ≥ Nk.est.k</th>
+                                <th>σ.u.d ≥ σ.pil.d</th>
+                                <th>σ.u.d ≥ σ.est.d</th>                    
+                            </tr>
+                        </thead>
+                    </table>
+                    <br>
+                    <img src="Fotos/tensoes-blevot.svg" class="imagem-forcas-e-area"><br><br><br>    
+
+                            <table id="armaduras-blocos1">
+                            
+                    AARMADURAS <br>
+                        <thead>
+                
+                            <tr class="armaduras">
+                                <th>d</th>
+                                <th>h</th>
+                                <th>As.princ</th>                              
+                                <th>As.sup</th>	
+                                <th>As.pele</th>
+                                <th>Asw</th>													
+                            </tr>
+                
+                        </thead>
+                
+                        <tbody id="valores-aramduras">
+                            <tr class="armadura-x" id = "aramaduras-bloco"> </tr> 
+                            <tr class="armadura-xmin"></tr>                                                      
+                            <tr class="armadura-xutilizado"></tr>     
+                            <tr class="armadura-y"></tr>      
+                            <tr class="armadura-ymin"></tr>                              
+                            <tr class="armadura-yutilizado"></tr>              
+                            <tr class="armadura-sup"></tr>                 
+                            <tr class="armadura-pele"> </tr>  
+                            <tr class="armadura-w"></tr>                      
+                                                
+                        </tbody>		
+    
+                    </table><br>
+
+            <br>
+            TABELA DE AÇO 
+            <br>
+
+                <table id="tabela-Quantitativo">
+                        <thead>
+                
+                            <tr class="armaduras">
+                                <th>Tipo</th>
+                                <th>Aço</th>
+                                <th>Quantidade</th>
+                                <th>Espaçamento</th>
+                                <th>Comprimento</th>
+                                <th>Aço kg</th>	                            
+                                                                      
+                            </tr>                
+                        </thead> 
+                                           
+                </table>
+                <br><br>                               
+              
+             
+            <h3>POSIÇÕES DAS ARMADURAS CALCULADAS</h3><br>          
+   
+              
+                <img src="Fotos/planta3estaca.svg" class="imagem-planta-geral1">  
+                <br><br>
+                           
+            </div>
+           
+
+    </form>
+    
+</section>
+
+<script src="JS/Blevot-3Estacas-Geometria.js"></script>
+<script src="JS/Blevot-3Estacas-Armaduras.js"></script>
+
+
+
+<footer class = "roda-pe">
+    <img src="Fotos/logoPECE.png" alt="Logo PECE">
+    <p class="copyright">Trabalho de conclusão de curso</p>
+    <p>São Paulo 2023</p>
+</footer>
+
+
+</html>
+
+

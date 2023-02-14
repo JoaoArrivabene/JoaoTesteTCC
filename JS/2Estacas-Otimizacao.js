@@ -107,27 +107,27 @@ function angulo (event) {
     }
 
     // tensões no bloco devido Pilar      
-    var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);        
-    var tensaoPilarTd = document.createElement("td");
-    tensaoPilarTd.textContent = tensaoPilar + " kN/cm²" 
+    //var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(3);        
+    //var tensaoPilarTd = document.createElement("td");
+    //tensaoPilarTd.textContent = tensaoPilar + " kN/cm²" 
 
     // tensões resistente do bloco
-    var resistente1 = resistente 
-    var resistente1Td = document.createElement("td");
-    resistente1Td.textContent = resistente1  + " kN/cm²";
+    //var resistente1 = resistente 
+    //var resistente1Td = document.createElement("td");
+    //resistente1Td.textContent = resistente1  + " kN/cm²";
 
 
     //situação NBR 
-    var resistenteNBRTd = document.createElement("td");  
+    //var resistenteNBRTd = document.createElement("td");  
 
-    if (resistente >= tensaoPilar ){
-        resistenteNBRTd.textContent = " Resiste ";
-        resistenteNBRTd.style.backgroundColor = "lightblue"           
-    }else{
-        resistenteNBRTd.textContent = " Não resiste";
-        resistenteNBRTd.style.backgroundColor = "lightcoral"
+   // if (resistente >= tensaoPilar ){
+        //resistenteNBRTd.textContent = " Resiste ";
+        //resistenteNBRTd.style.backgroundColor = "lightblue"           
+   // }else{
+        //resistenteNBRTd.textContent = " Não resiste";
+        //resistenteNBRTd.style.backgroundColor = "lightcoral"
         
-    }
+    //}
   
     senoTr.appendChild(senoTd); //seno 
     senoTr.appendChild(alturaUtilTd); //altura útil
@@ -135,9 +135,9 @@ function angulo (event) {
     senoTr.appendChild(tensaoPilarAreaTd); // tensão do pilar ampliado
     senoTr.appendChild(resistenteTd); // tensão resistente
     senoTr.appendChild(ampliadaTd); // comparação entre as situações   
-    senoTr.appendChild(tensaoPilarTd); // tensão NBR
-    senoTr.appendChild(resistente1Td); //tensão resistente novamente
-    senoTr.appendChild(resistenteNBRTd); //comparação entre as situações
+    //senoTr.appendChild(tensaoPilarTd); // tensão NBR
+    //senoTr.appendChild(resistente1Td); //tensão resistente novamente
+    //senoTr.appendChild(resistenteNBRTd); //comparação entre as situações
 
     var tabelaSeno = document.querySelector('#alternado-seno-d');
     tabelaSeno.appendChild(senoTr); 

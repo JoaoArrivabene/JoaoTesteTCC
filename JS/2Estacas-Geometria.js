@@ -182,9 +182,9 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //TENSÕES 
     // tensões no bloco devido Pilar        
-    var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(2);    
-    var tensaoPilarTd = document.createElement("td");
-        tensaoPilarTd.textContent = tensaoPilar + " kN/cm²";
+    //var tensaoPilar = ((2*nkResiste*1.4)/(1*form.pilarBp.value*(form.pilarAp.value*1+0.4*alturaUtil))).toFixed(2);    
+    //var tensaoPilarTd = document.createElement("td");
+        //tensaoPilarTd.textContent = tensaoPilar + " kN/cm²";
 
     // tensões no área ampliada !   
     var nkRsultadoAmpliado = ((nkResiste*1.4)/(2*areaAmpliadaPilar)).toFixed(3)   
@@ -230,32 +230,32 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 
                   
     //situação resistente NBR6118
-    var nbrTd = tensaoPilard; 
-    var nbrATd = document.createElement("td");
-    if (nbrTd>= tensaoPilar){
-        nbrATd.textContent = " Resiste"; 
-        nbrATd.style.backgroundColor = "lightblue"  
+    //var nbrTd = tensaoPilard; 
+    //var nbrATd = document.createElement("td");
+    //if (nbrTd>= tensaoPilar){
+       // nbrATd.textContent = " Resiste"; 
+        //nbrATd.style.backgroundColor = "lightblue"  
          
-    }else{
-        nbrATd.textContent = " Não resiste";
-        nbrATd.style.backgroundColor = "lightcoral" 
-    }
+    //}else{
+       // nbrATd.textContent = " Não resiste";
+        //nbrATd.style.backgroundColor = "lightcoral" 
+    //}
        
 
 
-        tensaoTr.appendChild(tensaoPilarTd);
+        //tensaoTr.appendChild(tensaoPilarTd);
         tensaoTr.appendChild(tensaoPilarAreaTd);
         tensaoTr.appendChild(tensaoPilardTd);
         tensaoTr.appendChild(nkResisteTd1);
         tensaoTr.appendChild(ampliadaTd1);
-        tensaoTr.appendChild(nbrATd);
+        //tensaoTr.appendChild(nbrATd);
 
     var tabelaTensaoTr = document.querySelector('#tabela-tensoes');
         tabelaTensaoTr.appendChild(tensaoTr); 
 
 });
  
-    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
 
 const btn = document.querySelector('.recarregar');
     btn.addEventListener('click',function(){

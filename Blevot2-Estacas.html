@@ -27,7 +27,7 @@
             
            
        		<ul class = "dados">
-                <h3>BLOCO SOBRE DUAS ESTACAS</h3><br>           
+                <h3>BLOCO SOBRE DUAS ESTACAS - BLÉVOT</h3><br>           
 			
             <ul class = "pilaresAPeBP">
             <h5>Pilar</h5>
@@ -98,109 +98,32 @@
                     <tr>
                         <th>lado A</th>
                         <th>lado B</th>
-                        <th>eixo</th>
-                        <th>d'</th>
-                        <th>θ</th>
-                        <th>sen θ</th>
-                        <th>z</th>
-                        <th>d</th>
-                        <th>h</th>
+                        <th>eixo</th>  
+                        <th>d'</th>                       
                         <th>fcd</th>
-                        <th>αv2</th>
-                     
-                    </tr>
-                </thead>
-            </table>
-            <br>
-            <img src="Fotos/geometria-total.svg" class="imagem-forcas-e-area"><br><br>
-
-            <h3>FORÇAS, EXCENTRICIDADES E ÁREAS AMPLIADAS</h3>
-            <br>
-
-            <table id ="tabela-forcas">
-                <thead>
-                     <tr>
-                        <th>Nk.est.1</th>
-                        <th>Nk.est.2</th>
+                        <th>d.mín(45°)</th>                      
+                        <th>d.máx(55°)</th> 
+                        <th>Aest</th>                         
+                        <th>A.pil</th> 
                         <th>Nk.est.k</th>
                         <th>Nk.est.adm</th>
-                        <th>Aest.amp</th>        
-                        <th>ex</th>
-                        <th>ey</th>
-                        <th>e</th>
-                        <th>Δx</th>
-                        <th>Δy</th>
-                        <th>A.pil.amp</th>
-                         
+                      
                     </tr>
                 </thead>
             </table>
             <br>
-            <img src="Fotos/forcas-exentricidades.svg" class="imagem-forcas-e-area"><br><br>
+            <img src="Fotos/geometria-comparativo.svg" class="imagem-forcas-e-area"><br><br>
 
-            <h3>TENSÕES E SITUAÇÕES DE RESISTÊNCIA</h3>
-            <br>
-            <table id ="tabela-tensoes">
-                <thead>
-                     <tr>
-                        <th>σ.pil.d NBR6118</th>
-                        <th>σ.amp.pil.d</th>
-                        <th>σ.pil.u.d</th>
-                        <th>Nk.est.adm ≥ Nk.est.k</th>
-                        <th>σ.pil.u ≥ σ.amp.pil.d</th>        
-                        <th>σ.pil.u ≥ σ.pil.d</th>
-                    
-                    </tr>
-                </thead>
-            </table>
-            <br>
-            <img src="Fotos/tensoes-conferencia.svg" class="imagem-forcas-e-area"><br><br><br>
-     
            
+            
+            
             </div> <br>
 
 
 
             <div class="armadura-bloco-otimizacao"> 
-                <h3>ALTERAÇÃO DE VALORES PARA CHECAGEM</h3><br> 
+                
 
-                <h4>Arbitrar um valor do ângulo para conferência.</h4><br>                                       
-                                                
-                <ul class="variacao-seno">                    
-                                                                                      
-                <label class="textos-As-movel">Âng.45a55:</label>
-                <input name="novoSeno" type="number" placeholder="Insira o ângulo" class="as-input-angulo-movel">
-                                                     
-               
-                </ul> 
-                <br><br>
-                <button onclick id="angulo-calculo">Verificar</button>                
-                <br><br><br> 
-
-
-                <table id="alternado-seno-d">
-                    <thead>
-            
-                        <tr class="otimizacao-seno">
-                            <th>Ângulo</th>
-                            <th>d</th>
-                            <th>h</th>
-                            <th>σ.amp.pil.d</th>
-                            <th>σ.pil.u</th>
-                            <th>M.Geral</th>                            
-                            <th>σ.pil.d</th>
-                            <th>σ.pil.u</th>
-                            <th>NBR6118</th>
-                      														
-                        </tr>
-            
-                    </thead>
-                    
-                	
-    
-                </table><br>
-               
-                <br><br>
 
                 <h3>CÁLCULO DAS ARMADURAS</h3><br>
 
@@ -216,18 +139,15 @@
                         <label class="textos-As">Barra As.x:</label>
                         <input name="asx" type="number" placeholder="Barra Ø mm" class="as-input">
                         
-                  
-                        <label class="textos-As">Barra As.y:</label>
-                        <input name="asy" type="number" placeholder="Barra Ø mm" class="as-input">
-                        <br><br>
-                       
                         <label class="textos-As">Barra As.sup:</label>
                         <input name="assup" type="number" placeholder="Barra Ø mm" class="as-input">
-                        
                         
                         <label class="textos-As">Barra As.pele:</label>
                         <input name="aspele" type="number" placeholder="Barra Ø mm" class="as-input">
                         
+                      
+                        <br><br>                     
+                                                
                      
                         <label class="textos-As">Barra Asw:</label>
                         <input name="asw" type="number" placeholder="Barra Ø mm" class="as-input">                   
@@ -239,20 +159,33 @@
                         
                         <br><br>
 
-                    <table id="armaduras-blocos1">
+
+                    TENSÕES <br>   
+                    <table id ="tabela-tensoes">
+                        <thead>
+                            <tr>
                             
-           
+                                <th>σ.pil.d</th>
+                                <th>σ.est.d</th>
+                                <th>σ.u.d</th>
+                                <th>Nk.est.adm ≥ Nk.est.k</th>
+                                <th>σ.u.d ≥ σ.pil.d</th>
+                                <th>σ.u.d ≥ σ.est.d</th>                    
+                            </tr>
+                        </thead>
+                    </table>
+                    <br>
+                    <img src="Fotos/tensoes-blevot.svg" class="imagem-forcas-e-area"><br><br><br>    
+
+                            <table id="armaduras-blocos1">
+                            
+                    AARMADURAS <br>
                         <thead>
                 
                             <tr class="armaduras">
                                 <th>d</th>
                                 <th>h</th>
-                                <th>As.1x</th>
-                                <th>Asx.min</th>
-                                <th>As.x.utili</th>	
-                                <th>As.1y</th>
-                                <th>Asy.min</th>
-                                <th>As.y.utili</th>
+                                <th>As.princ</th>                              
                                 <th>As.sup</th>	
                                 <th>As.pele</th>
                                 <th>Asw</th>													
@@ -276,7 +209,7 @@
                     </table><br>
 
             <br>
-            <h4>Tabela de aço </h4>
+            TABELA DE AÇO 
             <br>
 
                 <table id="tabela-Quantitativo">
@@ -317,9 +250,9 @@
     
 </section>
 
-<script src="JS/calculo-nkest.js"></script>
-<script src="JS/teste.js"></script>
-<script src="JS/armadura.js"></script>
+<script src="JS/Blevot-2Estacas-Geometria.js"></script>
+<script src="JS/Blevot-2Estacas-Armaduras.js"></script>
+
 
 
 <footer class = "roda-pe">

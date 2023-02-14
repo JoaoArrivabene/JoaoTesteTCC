@@ -41,7 +41,7 @@ html{
 
 
 .imagem-planta-geral1{
-    width: 70%;
+    width: 55%;
     padding-left: 2%;
 }
 
@@ -64,6 +64,46 @@ html{
      background: lightgray;
      border: 1px solid #000000;
 }
+
+#tabela-blevot{
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    padding: .7em;
+    margin: 0;       
+    text-align: center;
+    font-weight: bold;
+    background-color: #EEE;
+    border: 1px solid #000000;
+ 
+}
+
+
+#tabela-blevot> :nth-child(even){
+ background: lightgray;
+ border: 1px solid #000000;
+}
+
+
+#tabela-graziano{
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    padding: .7em;
+    margin: 0;       
+    text-align: center;
+    font-weight: bold;
+    background-color: #EEE;
+    border: 1px solid #000000;
+ 
+}
+
+
+#tabela-graziano> :nth-child(even){
+ background: lightgray;
+ border: 1px solid #000000;
+}
+
 
 
 #tabela-geometria{
