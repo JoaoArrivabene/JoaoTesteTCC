@@ -11,6 +11,7 @@
    sodipodi:docname="forcas-exentricidades.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -24,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.1893044"
-     inkscape:cx="159.33684"
-     inkscape:cy="266.12195"
+     inkscape:zoom="0.84096521"
+     inkscape:cx="-131.39664"
+     inkscape:cy="48.158948"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -35,6 +36,36 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs3409">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_1"
+       id="pattern4037"
+       patternTransform="matrix(-6.4278761,3.1619135,-7.6604444,-2.6531604,164.24389,84.011776)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="2"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_1"
+       inkscape:stockid="Stripes 1:1"
+       inkscape:isstock="true">
+      <rect
+         style="fill:black;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect3008" />
+    </pattern>
+    <linearGradient
+       id="linearGradient2022"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop2020" />
+    </linearGradient>
     <rect
        x="-28.498222"
        y="385.4635"
@@ -149,6 +180,28 @@
        width="45.881882"
        height="44.136257"
        id="rect25462-9-98-5-0-0-9" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_1-2"
+       id="pattern4037-5"
+       patternTransform="matrix(-6.4278761,3.1619135,-7.6604444,-2.6531604,168.46778,84.025365)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="2"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_1-2"
+       inkscape:stockid="Stripes 1:1"
+       inkscape:isstock="true">
+      <rect
+         style="fill:black;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect3008-3" />
+    </pattern>
   </defs>
   <g
      inkscape:label="Camada 1"
@@ -303,15 +356,15 @@
        transform="matrix(0.23429863,0,0,0.23357814,137.98408,36.830961)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2116"><tspan
+         id="tspan4251"><tspan
            style="fill:#000000"
-           id="tspan2114">Área estaca
+           id="tspan4249">Área estaca
 </tspan></tspan><tspan
          x="-28.498047"
          y="454.28703"
-         id="tspan2120"><tspan
+         id="tspan4255"><tspan
            style="fill:#000000"
-           id="tspan2118">Ampliada</tspan></tspan></text>
+           id="tspan4253">Ampliada</tspan></tspan></text>
     <path
        style="opacity:0.96;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.221072;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"
        d="m 177.63794,140.31648 c -34.67647,0 -34.67647,0 -34.67647,0 l -0.001,-31.05198"
@@ -323,9 +376,9 @@
        transform="matrix(0.23429863,0,0,0.23357814,196.3584,25.464403)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2124"><tspan
+         id="tspan4259"><tspan
            style="fill:#000000"
-           id="tspan2122">ap</tspan></tspan></text>
+           id="tspan4257">ap</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text17213-0-9"
@@ -333,9 +386,9 @@
        transform="matrix(0.23429863,0,0,0.23357814,175.9248,-21.55314)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2128"><tspan
+         id="tspan4263"><tspan
            style="fill:#000000"
-           id="tspan2126">ex</tspan></tspan></text>
+           id="tspan4261">ex</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text17213-0-9-3"
@@ -343,11 +396,11 @@
        transform="matrix(0,-0.23357814,0.23429863,0,71.461515,92.293701)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2134"><tspan
+         id="tspan4269"><tspan
            style="fill:#000000"
-           id="tspan2130">Δ</tspan><tspan
+           id="tspan4265">Δ</tspan><tspan
            style="fill:#000000"
-           id="tspan2132">y</tspan></tspan></text>
+           id="tspan4267">y</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text17213-0-9-3-3"
@@ -355,11 +408,11 @@
        transform="matrix(0.23429863,0,0,0.23357814,211.72397,-3.970784)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2140"><tspan
+         id="tspan4275"><tspan
            style="fill:#000000"
-           id="tspan2136">Δ</tspan><tspan
+           id="tspan4271">Δ</tspan><tspan
            style="fill:#000000"
-           id="tspan2138">x</tspan></tspan></text>
+           id="tspan4273">x</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text17213-0-2"
@@ -367,7 +420,7 @@
        transform="matrix(0.23429863,0,0,0.23357814,197.98408,33.159462)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2142">4</tspan></text>
+         id="tspan4277">4</tspan></text>
     <path
        style="opacity:0.96;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.221072;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 190.16931,124.35673 c 5.46729,-0.0343 5.46729,-0.0343 5.46729,-0.0343"
@@ -391,9 +444,9 @@
        transform="matrix(0.23429863,0,0,0.23357814,219.9568,9.8523139)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2146"><tspan
+         id="tspan4281"><tspan
            style="fill:#000000"
-           id="tspan2144">bp</tspan></tspan></text>
+           id="tspan4279">bp</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text17213-0-2-1"
@@ -401,7 +454,7 @@
        transform="matrix(0.23429863,0,0,0.23357814,221.58247,17.547373)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2148">4</tspan></text>
+         id="tspan4283">4</tspan></text>
     <path
        style="opacity:0.96;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.223906;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 213.62134,108.74462 c 5.61377,-0.0342 5.61377,-0.0342 5.61377,-0.0342"
@@ -413,15 +466,15 @@
        transform="matrix(0.23429863,0,0,0.23357814,216.63246,24.946888)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2152"><tspan
+         id="tspan4287"><tspan
            style="fill:#000000"
-           id="tspan2150">Área pilar
+           id="tspan4285">Área pilar
 </tspan></tspan><tspan
          x="-28.498047"
          y="454.28703"
-         id="tspan2156"><tspan
+         id="tspan4291"><tspan
            style="fill:#000000"
-           id="tspan2154">Ampliada</tspan></tspan></text>
+           id="tspan4289">Ampliada</tspan></tspan></text>
     <path
        style="opacity:0.96;fill:#000080;fill-opacity:1;stroke:#000080;stroke-width:0.221072;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 202.64822,98.186493 c 0,-8.960233 0,-8.960233 0,-8.960233"
@@ -474,9 +527,9 @@
        transform="matrix(0,-0.23357814,0.23429863,0,33.290882,95.045625)"><tspan
          x="-28.498047"
          y="414.28703"
-         id="tspan2160"><tspan
+         id="tspan4295"><tspan
            style="fill:#000000"
-           id="tspan2158">ey</tspan></tspan></text>
+           id="tspan4293">ey</tspan></tspan></text>
     <ellipse
        style="opacity:0.96;fill:#000080;fill-opacity:1;stroke:#000080;stroke-width:0.31106;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path20285"
@@ -563,8 +616,19 @@
        id="path25065-6" />
     <path
        style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:0.3;stroke-dasharray:2.4, 0.599998, 0.3, 0.599998;stroke-dashoffset:0"
-       d="M 33.307109,119.76145 C 62.841462,80.949961 62.841462,80.949961 62.841462,80.949961"
-       id="path25067-1" />
+       d="M 33.30711,119.76145 61.186241,83.494187"
+       id="path25067-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:0.96;fill:url(#pattern4037);fill-opacity:1;stroke:#ff0000;stroke-width:0.192739;stroke-dasharray:1.54191, 0.385476, 0.192739, 0.385476;stroke-dashoffset:0"
+       d="m 60.816924,80.949961 0.04938,2.960424"
+       id="path25067-1-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:0.96;fill:url(#pattern4037-5);fill-opacity:1;stroke:#ff0000;stroke-width:0.192739;stroke-dasharray:1.54191, 0.385476, 0.192739, 0.385476;stroke-dashoffset:0"
+       d="m 65.040807,80.96355 0.04938,2.960424"
+       id="path25067-1-1-6"
+       sodipodi:nodetypes="cc" />
     <path
        sodipodi:type="star"
        style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:1.38866;stroke-dasharray:none"
@@ -585,8 +649,9 @@
        transform="matrix(0.13512176,0.11338062,-0.17007869,0.20269189,34.927179,99.994137)" />
     <path
        style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:0.3;stroke-dasharray:2.4, 0.599998, 0.3, 0.599998;stroke-dashoffset:0"
-       d="M 91.982722,119.78168 C 62.841462,80.949961 62.841462,80.949961 62.841462,80.949961"
-       id="path25067-5-8" />
+       d="M 91.982721,119.78169 65.090187,83.923974"
+       id="path25067-5-8"
+       sodipodi:nodetypes="cc" />
     <path
        sodipodi:type="star"
        style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:1.38866;stroke-dasharray:none"
@@ -701,9 +766,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,5.9598328,36.397047)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2164"><tspan
+         id="tspan4299"><tspan
            style="stroke-opacity:0"
-           id="tspan2162">Nk</tspan></tspan></text>
+           id="tspan4297">Nk</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text25460-6-3"
@@ -711,9 +776,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,-13.10778,124.35902)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2168"><tspan
+         id="tspan4303"><tspan
            style="stroke-opacity:0"
-           id="tspan2166">Nk.est.adm</tspan></tspan></text>
+           id="tspan4301">Nk.est.adm</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text25460-3-8"
@@ -721,9 +786,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,24.396596,46.954885)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2172"><tspan
+         id="tspan4307"><tspan
            style="stroke-opacity:0"
-           id="tspan2170">Mk</tspan></tspan></text>
+           id="tspan4305">Mk</tspan></tspan></text>
     <path
        style="opacity:0.96;fill:#000080;stroke:#000080;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="M 31.693169,135.35328 H 94.27063"
@@ -743,7 +808,7 @@
        transform="matrix(0.26458333,0,0,0.26458333,2.7932453,105.9664)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2174">eixo</tspan></text>
+         id="tspan4309">eixo</tspan></text>
     <text
        xml:space="preserve"
        id="text25460-1-07"
@@ -751,9 +816,9 @@
        transform="matrix(0.23097347,0,0,0.22213703,1.9275754,86.646292)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2178"><tspan
+         id="tspan4313"><tspan
            style="fill:#ff0000;stroke-opacity:0"
-           id="tspan2176">Nk</tspan></tspan></text>
+           id="tspan4311">Nk</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text25460-1-9-6"
@@ -761,7 +826,7 @@
        transform="matrix(0.23097347,0,0,0.22213703,3.5607875,92.871835)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2180">2</tspan></text>
+         id="tspan4315">2</tspan></text>
     <text
        xml:space="preserve"
        id="text25460-1-70-2"
@@ -769,9 +834,9 @@
        transform="matrix(0.23097347,0,0,0.22213703,14.371633,86.468333)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2184"><tspan
+         id="tspan4319"><tspan
            style="fill:#ff0000;stroke-opacity:0"
-           id="tspan2182">Mk</tspan></tspan></text>
+           id="tspan4317">Mk</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text25460-1-9-10-2"
@@ -779,7 +844,7 @@
        transform="matrix(0.23097347,0,0,0.22213703,13.374342,92.688597)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2186">eixo</tspan></text>
+         id="tspan4321">eixo</tspan></text>
     <text
        xml:space="preserve"
        id="text25460-1-7-7-6-1"
@@ -787,9 +852,9 @@
        transform="matrix(0.15627338,0,0,0.16449623,24.976161,93.217399)"><tspan
          x="197.76953"
          y="107.00774"
-         id="tspan2190"><tspan
+         id="tspan4325"><tspan
            style="fill-opacity:0.832418"
-           id="tspan2188">±</tspan></tspan></text>
+           id="tspan4323">±</tspan></tspan></text>
     <path
        style="opacity:0.96;fill:#ff0000;fill-opacity:0;stroke:#ff0000;stroke-width:0.256833;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 47.659805,110.92041 c 0.08028,-0.0193 7.666485,0 7.666485,0"

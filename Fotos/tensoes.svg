@@ -165,9 +165,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.5661426"
-     inkscape:cx="444.23437"
-     inkscape:cy="272.89944"
+     inkscape:zoom="1.6012931"
+     inkscape:cx="140.19919"
+     inkscape:cy="378.7564"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -230,8 +230,14 @@
      id="path25065" />
   <path
      style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:1.9537;stroke-dasharray:15.6296, 3.90738, 1.9537, 3.90738;stroke-dashoffset:0"
-     d="M 72.144586,496.20495 C 246.1212,216.77761 246.1212,216.77761 246.1212,216.77761"
-     id="path25067" />
+     d="M 48.899455,534.29426 222.87607,254.86692"
+     id="path25067"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:1.09175;stroke-dasharray:8.73394, 2.1835, 1.09175, 2.1835;stroke-dashoffset:0"
+     d="m 223.75488,216.69174 0.0776,22.75152 0.007,2.19013 0.0452,13.23777"
+     id="path25067-58"
+     sodipodi:nodetypes="cccc" />
   <path
      sodipodi:type="star"
      style="opacity:0.96;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.134;stroke-dasharray:none;stroke-dashoffset:126.781;stroke-opacity:1"
@@ -288,8 +294,9 @@
      transform="matrix(-0.79595542,-0.81629541,1.0018746,-1.4593011,213.3328,397.18375)" />
   <path
      style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:1.9537;stroke-dasharray:15.6296, 3.90738, 1.9537, 3.90738;stroke-dashoffset:0"
-     d="M 417.78226,496.3506 C 246.1212,216.77761 246.1212,216.77761 246.1212,216.77761"
-     id="path25067-5" />
+     d="M 417.78226,496.3506 269.04399,254.86692"
+     id="path25067-5"
+     sodipodi:nodetypes="cc" />
   <path
      sodipodi:type="star"
      style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:1.38866;stroke-dasharray:none"
@@ -399,9 +406,9 @@
      transform="matrix(1.5585687,0,0,1.9048949,-89.52744,-159.22764)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5550"><tspan
+       id="tspan5199"><tspan
          style="stroke-opacity:0"
-         id="tspan5548">Nk</tspan></tspan></text>
+         id="tspan5197">Nk</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text25460-6"
@@ -409,9 +416,9 @@
      transform="matrix(1.5585687,0,0,1.9048949,-171.64052,487.07184)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5554"><tspan
+       id="tspan5203"><tspan
          style="stroke-opacity:0"
-         id="tspan5552">Nk.est.adm</tspan></tspan></text>
+         id="tspan5201">Nk.est.adm</tspan></tspan></text>
   <path
      style="opacity:0.96;fill:#000000;stroke:#000000;stroke-width:1.9537;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      d="m 614.42073,123.93795 c 21.39542,-22.8436 21.39542,-22.8436 21.39542,-22.8436"
@@ -423,9 +430,9 @@
      transform="matrix(1.3605846,0,0,1.5992983,-86.029355,235.5562)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5558"><tspan
+       id="tspan5207"><tspan
          style="fill:#ff0000;stroke-opacity:0"
-         id="tspan5556">Nk</tspan></tspan></text>
+         id="tspan5205">Nk</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text25460-1-9"
@@ -433,7 +440,7 @@
      transform="matrix(1.3605846,0,0,1.5992983,-76.408662,280.37763)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5560">2</tspan></text>
+       id="tspan5209">2</tspan></text>
   <text
      xml:space="preserve"
      id="text25460-1-70"
@@ -441,9 +448,9 @@
      transform="matrix(1.3605846,0,0,1.5992983,-12.725716,234.27496)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5564"><tspan
+       id="tspan5213"><tspan
          style="fill:#ff0000;stroke-opacity:0"
-         id="tspan5562">Mk</tspan></tspan></text>
+         id="tspan5211">Mk</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text25460-1-9-10"
@@ -451,7 +458,7 @@
      transform="matrix(1.3605846,0,0,1.5992983,-18.600424,279.0584)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5566">eixo</tspan></text>
+       id="tspan5215">eixo</tspan></text>
   <text
      xml:space="preserve"
      id="text25460-1-7-7-6"
@@ -459,9 +466,9 @@
      transform="matrix(0.92055231,0,0,1.1843076,49.741869,282.86556)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5570"><tspan
+       id="tspan5219"><tspan
          style="fill-opacity:0.832418"
-         id="tspan5568">±</tspan></tspan></text>
+         id="tspan5217">±</tspan></tspan></text>
   <path
      style="opacity:0.96;fill:#ff0000;fill-opacity:0;stroke:#ff0000;stroke-width:1.67258;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      d="m 183.36335,410.32023 c 0.47286,-0.13906 45.16059,0 45.16059,0"
@@ -531,9 +538,9 @@
      transform="matrix(1.2599643,0,0,1.4142565,-245.46593,311.31189)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5574"><tspan
+       id="tspan5223"><tspan
          style="stroke-opacity:0"
-         id="tspan5572">Rbiela</tspan></tspan></text>
+         id="tspan5221">Rbiela</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text25460-69-8"
@@ -541,11 +548,11 @@
      transform="matrix(1.2599643,0,0,1.4142565,134.94018,235.40424)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5580"><tspan
+       id="tspan5229"><tspan
          style="stroke-opacity:0"
-         id="tspan5576">σ.</tspan><tspan
+         id="tspan5225">σ.</tspan><tspan
          style="stroke-opacity:0"
-         id="tspan5578">pil.u</tspan></tspan></text>
+         id="tspan5227">pil.u</tspan></tspan></text>
   <path
      style="opacity:0.96;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.95394;stroke-dasharray:none;stroke-dashoffset:126.781"
      d="m 119.93864,371.69641 c 39.23697,36.00381 39.23697,36.00381 39.23697,36.00381"
@@ -683,9 +690,9 @@
      transform="matrix(1.2599643,0,0,1.4142565,-164.44389,117.24508)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5584"><tspan
+       id="tspan5233"><tspan
          style="stroke-opacity:0"
-         id="tspan5582">Rbiela</tspan></tspan></text>
+         id="tspan5231">Rbiela</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text25460-69-4"
@@ -693,9 +700,9 @@
      transform="matrix(1.2599643,0,0,1.4142565,656.35061,430.52503)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5588"><tspan
+       id="tspan5237"><tspan
          style="stroke-opacity:0"
-         id="tspan5586">Rbiela</tspan></tspan></text>
+         id="tspan5235">Rbiela</tspan></tspan></text>
   <path
      style="opacity:0.96;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.95394;stroke-dasharray:none;stroke-dashoffset:126.781;stroke-opacity:1"
      d="m 626.33757,353.65008 c 0,0 245.27633,0.59481 245.27633,0 0,-0.5948 0,-46.9891 0,-46.9891 H 625.36425 v 77.62125 L 828.05789,632.016"
@@ -1059,7 +1066,7 @@
      transform="matrix(1.2599643,0,0,1.4142565,649.32734,39.72689)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5590">Área ampl.pliar</tspan></text>
+       id="tspan5239">Área ampl.pliar</tspan></text>
   <path
      style="opacity:0.96;fill:#000000;stroke:#000000;stroke-width:1.9537;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      d="m 861.35619,171.40873 c 21.39542,-22.84359 21.39542,-22.84359 21.39542,-22.84359"
@@ -1071,10 +1078,10 @@
      transform="matrix(1.2599643,0,0,1.4142565,634.98307,108.89063)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5592">σ.pil.d Tensão </tspan><tspan
+       id="tspan5241">σ.pil.d Tensão </tspan><tspan
        x="197.76953"
        y="147.00774"
-       id="tspan5594">referente ao pilar</tspan></text>
+       id="tspan5243">referente ao pilar</tspan></text>
   <text
      xml:space="preserve"
      id="text25460-69-8-4-9-3"
@@ -1082,11 +1089,11 @@
      transform="matrix(1.2599643,0,0,1.4142565,680.92246,230.83494)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5596">σ.u.d = fcd1
+       id="tspan5245">σ.u.d = fcd1
 </tspan><tspan
        x="197.76953"
        y="147.00774"
-       id="tspan5598">Tensão resistente</tspan></text>
+       id="tspan5247">Tensão resistente</tspan></text>
   <path
      sodipodi:type="star"
      style="opacity:0.96;fill:#008000;fill-opacity:1;stroke:#008000;stroke-width:1.13386;stroke-dasharray:none;stroke-dashoffset:126.781;stroke-opacity:1"
@@ -1122,7 +1129,7 @@
      transform="matrix(-0.69725359,1.2826473,-0.96380026,-0.7826376,931.87343,227.76266)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5600">θ</tspan></text>
+       id="tspan5249">θ</tspan></text>
   <path
      style="opacity:0.96;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51085;stroke-dasharray:none;stroke-dashoffset:126.781;stroke-opacity:1"
      d="m 625.12093,279.30021 c 0,-192.714862 0,-192.714862 0,-192.714862"
@@ -1154,7 +1161,7 @@
      transform="matrix(1.2599643,0,0,1.4142565,467.0508,-48.650674)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5602">ap/2</tspan></text>
+       id="tspan5251">ap/2</tspan></text>
   <text
      xml:space="preserve"
      id="text25460-69-8-4-6-0"
@@ -1162,7 +1169,7 @@
      transform="matrix(1.2074632,0,0,1.4142565,401.17142,4.6979925)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5604">Área biela/senθ</tspan></text>
+       id="tspan5253">Área biela/senθ</tspan></text>
   <path
      style="opacity:0.96;fill:none;fill-opacity:1;stroke:#008080;stroke-width:1.51085;stroke-dasharray:none;stroke-dashoffset:126.781;stroke-opacity:1"
      d="m 899.71372,417.44939 22.51277,-18.89198 h 260.36271"
@@ -1182,9 +1189,9 @@
      transform="matrix(1.3605846,0,0,1.5992983,494.10499,44.887645)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5608"><tspan
+       id="tspan5257"><tspan
          style="fill:#ff0000;stroke-opacity:0"
-         id="tspan5606">Nk</tspan></tspan></text>
+         id="tspan5255">Nk</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text25460-1-9-9"
@@ -1192,7 +1199,7 @@
      transform="matrix(1.3605846,0,0,1.5992983,503.72566,89.709079)"><tspan
        x="197.76953"
        y="107.00774"
-       id="tspan5610">2</tspan></text>
+       id="tspan5259">2</tspan></text>
   <path
      style="opacity:0.96;fill:#ff0000;fill-opacity:0;stroke:#ff0000;stroke-width:1.67258;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      d="m 763.49768,219.65168 c 0.47287,-0.13906 45.16061,0 45.16061,0"
@@ -1201,4 +1208,9 @@
      style="opacity:0.96;fill:#008080;fill-opacity:1;stroke:#008080;stroke-width:1.51136;stroke-dasharray:none;stroke-dashoffset:126.781;stroke-opacity:1"
      d="m 881.17203,395.60585 c 25.49209,30.26842 25.49209,30.26842 25.49209,30.26842"
      id="path11108" />
+  <path
+     style="opacity:0.96;fill:#ff0000;stroke:#ff0000;stroke-width:1.09175;stroke-dasharray:8.73394, 2.1835, 1.09175, 2.1835;stroke-dashoffset:0"
+     d="m 268.91419,216.6875 0.0776,22.75152 0.007,2.19013 0.0452,13.23777"
+     id="path25067-58-2"
+     sodipodi:nodetypes="cccc" />
 </svg>
