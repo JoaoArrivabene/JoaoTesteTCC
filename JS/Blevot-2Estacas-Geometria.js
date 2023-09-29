@@ -2,6 +2,7 @@
 var botaoAdicionar = document.querySelector("#calculaBloco2"); 
 
 botaoAdicionar.addEventListener("click", function calcular (event) { 
+   
     event.preventDefault();
 
     var form = document.querySelector("#form-adiciona");
@@ -16,6 +17,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
     var ladoA =  (form.estaca.value * 4 +30).toFixed(1);
     var ladoATd = document.createElement('td');
         ladoATd.textContent = ladoA + ' cm'
+        
 
     //lado B
     var ladoB =  (form.estaca.value*1 + 30).toFixed(2);
@@ -35,15 +37,17 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 
 /////////////////////////////////////////////////////////////////////////
     //Froças nas Estacas
+   
     var nkest1 =  (1.05*form.forcaNk.value)/2;   
     var mkest1 =  form.forcaNk1.value;
-    var eixo =  form.estaca.value*3;        
-         
+    var eixo =  form.estaca.value*3;   
+      
     //criação das forças nas estacas 
     var nkest1A = (1*nkest1-(mkest1/(eixo/100))).toFixed(2);
-    var nk1Td = document.createElement("td");    
-        nk1Td.textContent = nkest1A + " kN"
-   
+    var nk1Td = document.createElement("td");   
+        nk1Td.textContent = nkest1A + " kN" 
+        
+
     //cálculo da nk2
     var nkest2A = (1*nkest1+(mkest1/(eixo/100))).toFixed(2);
     var nk2Td = document.createElement("td");  

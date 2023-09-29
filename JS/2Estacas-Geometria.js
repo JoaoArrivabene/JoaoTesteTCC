@@ -36,12 +36,13 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 /////////////////////////////////////////////////////////////////////////
     //Froças nas Estacas
     var nkest1 =  (1.05*form.forcaNk.value)/2;
-    console.log(nkest1)
     var mkest1 =  form.forcaNk1.value;
-    var eixo =  form.estaca.value*3;        
-         
+    var eixo =  form.estaca.value*3;  
+             
     //criação das forças nas estacas 
     var nkest1A = (1*nkest1-(mkest1/(eixo/100))).toFixed(2);
+      
+
     var nk1Td = document.createElement("td");    
     nk1Td.textContent = nkest1A + " kN"
    
@@ -252,7 +253,7 @@ botaoAdicionar.addEventListener("click", function calcular (event) {
 
     var tabelaTensaoTr = document.querySelector('#tabela-tensoes');
         tabelaTensaoTr.appendChild(tensaoTr); 
-
+      
 });
  
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   

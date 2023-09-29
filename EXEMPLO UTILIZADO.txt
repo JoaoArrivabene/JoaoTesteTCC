@@ -1,0 +1,59 @@
+BLOCO DUAS ESTACAS
+
+ap:40 cm
+bp:20 cm
+Nk: 1000 kN
+Mk: 100 kN*m
+Est: 25 cm
+Nestk: 650 kN
+fck: 30 Mpa
+
+GRAZIANO
+Estaca não passa - Aumenta o diâmetro para 30 cm
+angulo 45 - 43,79 d
+angulo 55 - 62,54 d 
+angulo 56,7 - 66,91 d
+angulo 52,5 - 57,06
+
+d = 57 cm
+h = 62 cm
+
+BLÉVOT
+
+d: 27 a 49,7 cm - d 49,7 = 13,12 cm²
+Estaca passa, tensão alta
+
+CONSIDERAÇÕES
+As principal = 13,12/15,45 = aproximadamente 14%
+ALTURA ÚTIL = 13% blévot mais baixo, isso deixa as tensões maiores
+
+
+BLOCO TRÊS ESTACAS
+
+ap:50 cm
+bp:30 cm
+Nk: 1000 kN
+Mkx: 100 kN*m
+Mky: 100 kN*m
+Est: 30 cm
+Nestk: 650 kN
+fck: 30 Mpa
+
+GRAZIANO
+
+angulo 45 - 44,16 d
+angulo 55 - 63,07 d 
+angulo 56,64 - 67,07 d - IGUALANDO AS CONTAS
+
+
+d = 57 cm
+h = 62 cm
+
+BLÉVOT
+
+d: 40,97 a 50,15 cm - d 50,15 = 13,12 cm²
+Estaca passa, tensão alta
+
+CONSIDERAÇÕES
+As principal = 10,92/15,99 = aproximadamente 14%
+ALTURA ÚTIL = 50/63 - 20% blévot mais baixo, isso deixa as tensões maiores
